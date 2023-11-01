@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+    <!-- 공지사항 목록 -->
+    <select id="boardList" resultType="kr.ed.haebeop.domain.Board">
+        select * from board where lev = 0 order by resdate asc
+    </select>
+    <!-- 글 상세보기 -->
+    <select id="boardDetail" resultType="kr.ed.haebeop.domain.Board">
+        select * from board where bno=#{bno}
+    </select>
+    <!-- 글 수 카운트 -->
+    <select id="totalCount" resultType="integer" >
+        select count(*) from board
+    </select>
+    <insert id="boardInsert">
+        INSERT INTO board(title, content, author) VALUES(#{title}, #{content}, #{author})
+    </insert>
+    <delete id="boardDelete">
+        delete from board where bno=#{bno}
+    </delete>
+    <!-- 자유게시판 수정 -->
+    <update id="boardEdit">
+        update board set title=#{title}, content=#{content} where bno=#{bno}
+    </update>
+    <!-- 조회수 증가 -->
+    <update id="countUp">
+        update board set cnt=cnt+1 where bno=#{bno}
+    </update>
+    <!-- 댓글 입력 -->
+    <insert id="commentInsert">
+        insert into board(title, content, author, lev, par) values ('댓글', #{content}, #{author}, 1, #{bno})
+    </insert>
+    <!-- 댓글 목록 출력 -->
+    <select id="commentList" resultType="kr.ed.haebeop.domain.Board">
+        select * from board where par = #{bno} and lev = 1 order by resdate desc
+    </select>
+    <!-- 모든 댓글 삭제 -->
+    <delete id="commentDeleteAll">
+        delete from board where par=#{bno}
+    </delete>
+    <!-- 모든 댓글 목록 -->
+    <select id="allCommentList" resultType="kr.ed.haebeop.domain.Board">
+        select * from board where lev = 1 order by resdate desc
+    </select>
+    <!-- 신고 기능 reportBoard -->
+    <insert id="reportBoard">
+        insert into report values (default, #{board_bno}, #{reporter}, #{reason}, default)
+    </insert>
+    <select id="checkReported" resultType="integer" >
+        SELECT COUNT(*) FROM report WHERE board_bno = #{board_bno} AND reporter = #{reporter}
+    </select>
+    <select id="boardReportList" resultType="kr.ed.haebeop.domain.Board">
+        SELECT
+            b.*,
+            r.reason,
+            r.report_date,
+            sub.report_count
+        FROM
+            (SELECT board_bno, COUNT(board_bno) as report_count FROM report GROUP BY board_bno) AS sub
+                JOIN
+            report r ON sub.board_bno = r.board_bno
+                JOIN
+            board b ON r.board_bno = b.bno
+        ORDER BY
+            r.report_date DESC;
+    </select>
+    <!-- 관리자 메인화면 신고리스트 -->
+    <select id="recentReportList" resultType="kr.ed.haebeop.domain.Board">
+            SELECT r.board_bno as bno, r.reporter, r.reason, r.report_date, 'board' AS board_type, b.title
+            FROM report r join board b on r.board_bno = b.bno
+        ORDER BY report_date DESC
+            LIMIT 10;
+    </select>
+
+    <!-- 신고 수 카운트 -->
+    <select id="cntReport" resultType="integer">
+        select count(*) from report WHERE board_bno = #{bno}
+    </select>
+
+    <!-- 게시글 추천(좋아요) 기능 -->
+    <select id="checkLiked" resultType="integer">
+        SELECT count(*) FROM boardlikes WHERE userid = #{userId} AND boardno = #{boardNo}
+    </select>
+    <delete id="removeLike">
+        delete from boardlikes where userid = #{userId} and boardno = #{boardNo}
+    </delete>
+    <insert id="addLike">
+        insert into boardlikes values (#{userId},#{boardNo},default)
+    </insert>
+    <select id="boardLikeList" resultType="kr.ed.haebeop.domain.Board">
+        select l.boardno as bno, l.userid, l.liketime, b.title
+        from boardlikes l join board b on l.boardno=b.bno where userid = #{id} order by liketime desc
+    </select>
+    <!-- 열람 기능 -->
+    <select id="getReadable" resultType="boolean">
+        select readable from board where bno = #{bno}
+    </select>
+    <!-- 열람 기능 - view에서 readable,bno 값을 받아옴 -->
+    <update id="readableEdit">
+        UPDATE board SET readable = #{readable} where bno=#{bno}
+    </update>
+    <!--  열람 기능 - view에서 readable,bno 값이 바뀌었을 때 받아옴 -->
+    <!--    <update id="readableEdit">-->
+    <!--        update board set readable = !readable where bno = #{bno}; -->
+    <!--    </update>-->
+</mapper>

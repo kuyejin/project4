@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+    <!-- 회원 목록 보기 -->
+    <select id="memberList" resultType="kr.ed.haebeop.domain.Member">
+        select * from member where id not in ('admin') order by regdate desc
+    </select>
+
+    <!-- 회원 상세 정보 보기 -->
+    <select id="getMember" resultType="kr.ed.haebeop.domain.Member">
+        select * from member where id = #{id}
+    </select>
+
+    <!-- 회원 탈퇴 -->
+    <delete id="memberDelete">
+        delete from member where id = #{id}
+    </delete>
+
+    <!-- 회원 수정 -->
+    <update id="memberUpdate">
+        update member set pw=#{pw }, name=#{name }, email=#{email }, tel=#{tel }, addr1=#{addr1 }, addr2=#{addr2 }, postcode=#{postcode }, birth=#{birth} where id = #{id }
+    </update>
+
+    <!-- 회원 가입 -->
+    <insert id="memberInsert">
+        insert into member values(#{id}, #{pw}, #{name}, #{email}, #{tel}, #{addr1}, #{addr2}, #{postcode}, DEFAULT, #{birth},
+        DEFAULT, DEFAULT, default, default, #{job})
+    </insert>
+
+    <!-- 로그인을 컨트롤에서 처리 -->
+    <select id="signIn" resultType="kr.ed.haebeop.domain.Member">
+        select * from member order by regdate desc
+    </select>
+
+    <!-- 로그인 : DAO 에서 처리 -->
+    <select id="loginCheck" resultType="kr.ed.haebeop.domain.Member">
+        select id, pw, name from member where id = #{id}
+    </select>
+
+    <!-- 로그인 : ajax로 처리 -->
+    <select id="login" resultType="kr.ed.haebeop.domain.Member">
+        select id, pw, name from member where id = #{id}
+    </select>
+
+    <!-- 회원 정보 조회 (비밀번호 찾기 할 때 필요)-->
+    <select id="selectMember"  resultType="kr.ed.haebeop.domain.Member">
+        select * from member where email = #{email}
+    </select>
+
+    <!-- 패스워드변경 -->
+    <update id = "pwUpdate" parameterType="kr.ed.haebeop.domain.Member">
+        update member set pw=#{pw} where email= #{email}
+    </update>
+
+    <update id="updateAuthStatus" parameterType="HashMap">
+        update member_list set status =1 where email=#{email} and authkey=#{authkey, jdbcType=VARCHAR}
+    </update>
+
+  <!--  &lt;!&ndash; 내 작성글 리스트 &ndash;&gt;
+    <select id="getWriteList" parameterType="String" resultType="BoardlistVO">
+        select * from (
+                          select doc_no as num, doc_subject as subject, doc_date as write_date from adopt_list where doc_email = #{email}
+                          union all
+                          select doc_no as num, doc_subject as subject, doc_date as write_date from free_doc where doc_email = #{email}
+                          union all
+                          select doc_no as num, fadoc_subject as subject, fadoc_date as write_date from free_auth where fadoc_r_email = #{email} and fadoc_check='인증완료'
+                          union all
+                          select doc_no as num, doc_subject as subject, doc_date as write_date from adopt_home where doc_email = #{email}
+                          union all
+                          select doc_no as num, doc_subject as subject, doc_date as write_date from community where doc_email = #{email}
+                          union all
+                          select doc_no as num, doc_subject as subject, doc_date as write_date from payang where doc_email = #{email}
+                          union all
+                          select doc_no as num, doc_subject as subject, doc_date as write_date from missing where doc_email = #{email}
+                      ) order by write_date desc
+    </select>
+
+    &lt;!&ndash; 내 댓글 리스트 &ndash;&gt;
+    <select id="getWriteComment" parameterType="String" resultType="CommentlistVO">
+        select * from (
+                          select doc_content as content, doc_date as write_date, doc_no from adopt_reply where doc_email = #{email}
+                          union all
+                          select doc_content as content, doc_date as write_date, doc_no from fdoc_refly where doc_email = #{email}
+                          union all
+                          select doc_content as content, doc_date as write_date, doc_no from free_auth_reply where doc_email = #{email}
+                          union all
+                          select doc_content as content, doc_date as write_date, doc_no from adopt_home_reply where doc_email = #{email}
+                          union all
+                          select doc_content as content, doc_date as write_date, doc_no from doc_comment where doc_email = #{email}
+                          union all
+                          select doc_content as content, doc_date as write_date, doc_no from payang_reply where doc_email = #{email}
+                          union all
+                          select doc_content as content, doc_date as write_date, doc_no from missing_reply where doc_email = #{email}
+                      ) order by write_date desc
+    </select>-->
+
+
+    <!-- 내 작성글 리스트 -->
+        <!--자유게시판-->
+    <select id="getWriteList1"  resultType="kr.ed.haebeop.domain.BoardlistVO">
+        select bno as num, title as subject, resdate as write_date from board where author = #{id} and lev = 0 order by resdate desc
+    </select>
+        <!--선생님 게시판-->
+    <select id="getWriteList2"  resultType="BoardlistVO">
+        select bno as num, title as subject, resdate as write_date from board_tea where author = #{id} and lev = 0 order by resdate desc
+    </select>
+         <!--학부모 게시판-->
+     <select id="getWriteList3" resultType="BoardlistVO">
+         select bno as num, title as subject, resdate as write_date from board_par where author = #{id} and lev = 0 order by resdate desc
+    </select>
+        <!--자료실-->
+<!--    <select id="getWriteList4"  resultType="BoardlistVO">-->
+<!--        select bno as num, title as subject, resdate as write_date from free where author = #{id} order by resdate desc-->
+<!--    </select>-->
+    <!--<select id="getWriteList5" parameterType="String" resultType="BoardlistVO">
+        select doc_no as num, doc_subject as subject, doc_date as write_date from community where doc_email = #{email} order by doc_date desc
+    </select>
+    <select id="getWriteList6" parameterType="String" resultType="BoardlistVO">
+        select doc_no as num, doc_subject as subject, doc_date as write_date from payang where doc_email = #{email} order by doc_date desc
+    </select>
+    <select id="getWriteList7" parameterType="String" resultType="BoardlistVO">
+        select doc_no as num, doc_subject as subject, doc_date as write_date from missing where doc_email = #{email} order by doc_date desc
+    </select>-->
+
+    <!-- 내 댓글 리스트 -->
+        <!--지유게시판 댓글-->
+    <select id="getWriteComment1" resultType="kr.ed.haebeop.domain.CommentlistVO">
+        select par as num, title as subject, content, resdate as write_date from board where author = #{id} and lev = 1 order by resdate desc
+    </select>
+    <!--<select id="getWriteComment2"  resultType="kr.ed.haebeop.domain.CommentlistVO">
+        select doc_content as content, doc_date as write_date, doc_no from fdoc_refly where doc_email = #{email} order by doc_date desc
+    </select>
+    <select id="getWriteComment3"  resultType="kr.ed.haebeop.domain.CommentlistVO">
+        select doc_content as content, doc_date as write_date, doc_no from free_auth_reply where doc_email = #{email} order by doc_date desc
+    </select>
+    <select id="getWriteComment4"  resultType="kr.ed.haebeop.domain.CommentlistVO">
+        select doc_content as content, doc_date as write_date, doc_no from adopt_home_reply where doc_email = #{email} order by doc_date desc
+    </select>
+    <select id="getWriteComment5" parameterType="String" resultType="CommentlistVO">
+        select doc_content as content, doc_date as write_date, doc_no from doc_comment where doc_email = #{email} order by doc_date desc
+    </select>
+    <select id="getWriteComment6" parameterType="String" resultType="CommentlistVO">
+        select doc_content as content, doc_date as write_date, doc_no from payang_reply where doc_email = #{email} order by doc_date desc
+    </select>
+    <select id="getWriteComment7" parameterType="String" resultType="CommentlistVO">
+        select doc_content as content, doc_date as write_date, doc_no from missing_reply where doc_email = #{email} order by doc_date desc
+    </select>-->
+
+
+    <select id="myReportList" resultType="kr.ed.haebeop.domain.Board">
+--         (
+            SELECT r.board_bno as bno, r.reporter, r.reason, r.report_date, 'board' AS board_type, b.title
+            FROM report r join board b on r.board_bno = b.bno where reporter = #{id}
+--         )
+--         UNION
+--         (
+--             SELECT board_bno as bno, reporter, reason, report_date, 'boardTea' AS board_type, b.title
+--             FROM report_tea r join board_tea b on r.board_bno = b.bno where reporter = #{id}
+--         )
+--         UNION
+--         (
+--             SELECT board_bno as bno, reporter, reason, report_date, 'boardPar' AS board_type, b.title
+--             FROM report_par r join board_par b on r.board_bno = b.bno where reporter = #{id}
+--         )
+        ORDER BY report_date DESC
+    </select>
+
+    <!--    boardReportCancel-->
+    <delete id="boardReportCancel">
+        delete from report where board_bno = #{board_bno} and reporter = #{reporter}
+    </delete>
+    <delete id="teaReportCancel">
+        delete from report_tea where board_bno = #{bno}
+    </delete>
+    <delete id="parReportCancel">
+        delete from report_par where board_bno = #{bno}
+    </delete>
+
+    <select id="myLikeList" resultType="kr.ed.haebeop.domain.BoardLikes">
+        select * from boardlikes where userid=#{id} order by liketime desc
+    </select>
+
+    <!--  boardLikeRemove  -->
+    <delete id="boardLikeRemove">
+        delete from boardlikes where userid = #{userid} and boardno = #{boardno}
+    </delete>
+
+    <select id="getMemberEmail" resultType="kr.ed.haebeop.domain.Member">
+        select * from member where email = #{email}
+    </select>
+
+    <!--security-->
+    <select id="getUserDetailsDto" resultType="kr.ed.haebeop.domain.UserDetail">
+        SELECT * FROM member WHERE email = #{email}
+    </select>
+
+    <!--네이버 회원가입-->
+    <insert id="regSocialUser" parameterType="kr.ed.haebeop.domain.Member">
+        INSERT INTO member (id, pw, name, email, tel, login_tp_cd)
+        VALUES (#{id}, #{pw}, #{name}, #{email},#{tel},#{login_tp_cd} );
+        <selectKey resultType="String" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+
+    <!-- 포인트 추가 -->
+    <update id="memberPoint">
+        update member set pt=pt+#{pt} where id=#{id}
+    </update>
+
+    <!-- 포인트 감산 -->
+    <update id="memberPointSub">
+        update member set pt=pt-#{pt} where id=#{id}
+    </update>
+</mapper>

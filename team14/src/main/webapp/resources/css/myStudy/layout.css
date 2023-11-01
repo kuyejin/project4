@@ -1,0 +1,901 @@
+@charset "utf-8";
+
+/*-------------------------------------------------
+Contents Style Sheet - 레이아웃
+Create date : 2016.08
+Attention : utf-8 인코딩 꼭 지키기, 한글 안깨지게 하기!
+-------------------------------------------------*/
+
+/* tit */
+.tit_h3 {padding:0 0 18px 0;font-size:20px;font-weight:bold;color:#333;}
+.tit_h3 small{display:inline-block;margin:0 0 0 10px;font-size:13px;font-weight:normal;vertical-align:middle;letter-spacing:-1px;}
+h3.ltit, h4.ltit {font-size:17px;padding-bottom:17px;font-weight:bold;color:#333;}
+.tit_desc{margin-top:-5px;color:#585c65;}
+.mtit{padding:0 0 15px;margin-bottom:0;font-size:18px;font-weight:bold;}
+.sTit{font-size:16px;font-weight:bold;color:#333;}
+.sTit.bulGryArrow{position:relative;padding-left:14px;}
+.sTit.bulGryArrow:before{content:'';display:inline-block;width:5px;height:7px;position:absolute;top:8px;left:2px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_gry_arr.png) no-repeat 0 0;}
+.sTit small{display:inline-block;margin-left:10px;font-size:12px;color:#9399a9;vertical-align:bottom;}
+.subMtit {font-size:20px;margin-bottom:18px;}
+.xSTit{margin:30px 0 0 0;font-size:15px;color:#333;}
+
+
+
+/* topTitArea */
+.topTitArea {position:relative; border-bottom:1px solid #000; height:75px; box-sizing:border-box; padding-top:30px;margin-bottom:11px;}
+.topTitArea.noLine{border-bottom:0;margin-bottom:0}
+.topTitArea h2 {font-size:20px;color:#222;line-height:1;}
+.topTitArea h2 .sub{font-weight:bold;font-size:17px;color:#575727}
+.topTitArea h2 .sub:after{display:inline-block;width:1px;height:17px;margin:7px 10px 0;background:#b2b2b2;vertical-align:top;content:'';}
+.topTitArea h3 {font-size:22px;color:#333;}
+.topTitArea.etc {border-bottom:none;padding-bottom:0 !important;}
+.topTitArea.etc .path {top:37px}
+.topTitArea .btnInfomation{position:absolute;right:0;top:32px;padding-right:23px;font-weight:bold;background:url(//cdndata.milkt.co.kr/high/www/Img_new/mystudy/class/ico_infomation.png) no-repeat 99% 0;}
+.topTitArea .btnInfomation a{text-decoration:none;color:#b9b9b9;font-size:12px;}
+.topTitArea a.addView{position:absolute; right:0; top:62px; color:#888; border:1px solid #dedede; padding:4px 24px 4px 11px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico_plus_01.png) no-repeat right 7px; letter-spacing:-1px;}
+
+
+.topTitArea.type02{padding-top:30px; margin-bottom:0px; border-bottom:0}
+.topTitArea.type03{margin-bottom:19px; padding-top:57px; border-bottom:0}
+.topTitArea.type04{margin-bottom:26px; padding-top:57px; border-bottom:0}
+
+.subTitArea{display:flex; display:-ms-flex;}
+.subTitArea.type02{justify-content:space-between}
+
+.subTitArea.total{position:relative}
+.subTitArea.total .totalBbs{position:absolute; right:0; top:12px}
+
+.subTitArea .selectBoxAll{position:relative; top:-7px;}
+
+/* skip_navi */
+.skip_navi, .skip_navi ul {height:0; position:absolute;z-index:200;left:0px;top:0px;width:100%;}
+.skip_navi a{position:absolute; top:-9999px; background:#000; width:100%; height: 30px; text-align: center; color: #fff; line-height: 30px; font-weight: bold; z-index: 100; opacity: 0.6; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter: alpha(opacity=60); }
+.skip_navi a:focus,
+.skip_navi a:hover,
+.skip_navi a:active{top:0;}
+
+.mainCont {overflow:hidden;width:1080px;margin:0 auto;}
+
+/* path */
+/* .path{position:absolute;right:0;top:5px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico_path_home.png) no-repeat left 2px;padding-left:17px;}
+.path li {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico_path_arr.png) no-repeat left 5px;color: #666;display: inline-block;margin-left:7px;padding-left:13px;font-size:12px;}
+.path li.home {line-height: normal;} */
+.path{position:absolute;right:0;top:33px;padding-left:17px;}
+.path ul:before{content:"HOME";color:#888;}
+.path li {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico_path_arr.png) no-repeat left 5px;color: #888;display: inline-block;margin-left:7px;padding-left:13px;font-size:12px;}
+.path li.home {line-height: normal;}
+
+/* titArea */
+.titArea {overflow:hidden;padding-top:50px;padding-bottom:18px;position:relative;}
+.titArea h3 {float:left;padding-bottom:0 !important;margin-bottom:0;}
+.titArea .ltit {padding-bottom:0;}
+.titArea > span.etc {color:#000; margin-left:10px;margin-top:4px;padding-left:10px;}
+.titArea > span {display:inline-block;margin-top:5px;margin-left:15px;padding-left:16px;font-size:13px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bl_sub_h3.png) no-repeat left 2px;color:#333;}
+.titArea > span em {color:#7847a5;font-weight: bold;}
+.titArea .btnMore {position:absolute;top:0;right:0;}
+
+#header {position:relative; z-index:4000; background:#fff; width:100%;}
+.headerTop {border-bottom: 1px solid #e1e1e1;background: #f5f5f5;}
+.headerTop .utilArea {overflow: hidden;width: 1080px;height:34px;margin: auto;border-right: 1px solid #e1e1e1;}
+.headerTop .utilArea a {display: block;padding:0 15px;height:34px;line-height:34px;float: left;font-size:11px;color:#888;border-left: 1px solid #e1e1e1;}
+.headerTop .utilArea a img{vertical-align:middle;}
+.headerTop .utilArea .left {float: left;border-right: 1px solid #e1e1e1;}
+.headerTop .utilArea .left a span {padding-left:15px;display: inline-block;}
+.headerTop .utilArea .left .startPag span {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_start_pag.png) no-repeat left center;}
+.headerTop .utilArea .left .bookmark span {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_book_mark.png) no-repeat left center;}
+.headerTop .utilArea .right {float: right;}
+.headerTop .utilArea .right a{text-decoration:none}
+.headerTop .utilArea .right a:hover:first-child{text-decoration:underline;}
+.headerTop .utilArea .right .milkt {background: #eaeaea;padding-left:0;font-weight: bold;}
+.headerTop .utilArea .right .milkt em {text-indent: -9999;font-size: 0;position:absolute;left:-999999;}
+.headerTop .utilArea .right .milkt span {padding:5px 0 5px 75px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/main/bg_util_milkt.png) no-repeat 10px center;}
+
+.headerCon {position: relative; width:100%; padding:16px 0; margin:0 auto 0;}
+.headerCon h1 {position: absolute;top:20px;left:425px;}
+.headerCon .linkMenu {overflow: hidden; padding:0 58px}
+.headerCon .linkMenu a{float:left; font-size:14px; color:#777; display:block; padding:0 20px;}
+.headerCon .linkMenu .left {float:left;}
+.headerCon .linkMenu .left a {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bul_gr_line01.png) no-repeat left 5px;}
+.headerCon .linkMenu .left span.sns a{display:block; height:16px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/sns_ico.png) no-repeat 0 0; padding:0;}
+.headerCon .linkMenu .left span.sns a.sns01{width:20px; background-position:0 0;}
+.headerCon .linkMenu .left span.sns a.sns02{width:27px; background-position:-20px 0}
+.headerCon .linkMenu .left span.sns a.sns03{width:26px; background-position:-47px 0}
+.headerCon .linkMenu .left span.sns a.sns04{width:34px; background-position:-73px 0}
+.headerCon .linkMenu .left span.sns a.sns05{width:24px; background-position:-107px 0}
+.headerCon .linkMenu .left span.sns a.sns06{width:16px; background-position:-131px 0; margin-right:27px}
+
+.headerCon .linkMenu .right {float: right;}
+.headerCon .linkMenu .right a{padding:0 10px}
+.headerCon .linkMenu .right a:first-child {padding-left:0;background:none;}
+.headerCon .linkMenu .right span{display:inline-block;}
+.headerCon .linkMenu .right span.nNum{background:#7847a5; border-radius:10px; color:#fff; text-align:center; font-size:12px; padding:0 7px;}
+.headerCon .linkMenu .right span.bNum{width:16px; height:16px; background:#7847a5; line-height:16px;  border-radius:100%; color:#fff; text-align:center; font-size:12px;}
+
+.headerCon .linkMenu a.login {color:#8553b3;}
+
+.headerfot {position:relative;}
+
+.loginSchWrap {overflow:hidden;width:1080px;margin:auto;padding:10px 0;}
+.loginSchWrap .loginArea {float:left;overflow:hidden;font-size:12px;color:#999}
+.loginSchWrap .loginArea p.txt {float:left;color:#666;font-size:12px;}
+.loginSchWrap .loginArea p.txt span {color:#f26f21;}
+.loginSchWrap .searchArea {display:block;float:right;}
+
+/* 로그인전 */
+.loginArea .checkboxWrap {vertical-align:top;margin-top:4px;margin-left:20px;}
+.loginArea .checkboxWrap .checkStyle {margin-top:4px;width:10px;height:10px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_ws_chk_default.png) no-repeat left center;}
+.loginArea .checkboxWrap .checkStyle.on {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_ws_chk_checked.png) no-repeat left top;}
+.loginArea .checkboxWrap input[type='checkbox'].inputCheckbox{display:inline-block;vertical-align:top;width:10px;height:10px;padding:0;margin:0;opacity:0;filter:alpha(opacity=0);}
+.loginArea .loingForm {float:left;text-align:left;}
+.loginArea .loingForm .placeholderGuidetext {top:2px; width:90px;}
+.loginArea .loingForm input[type=text],
+.loginArea .loingForm input[type=password] {vertical-align:top;width:90px !important; border:none;background:#f1f1f1;height:17px;padding:2px 10px 3px 10px;font-size:11px;color:#666;line-height:1;}
+.loginArea .loginLink {display:inline-block;margin-top:4px;margin-left:18px;vertical-align:top;}
+.loginArea .loginLink a {display:inline-block; margin:0 0 0 18px;padding:0 0 0 13px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bl_gry_line01.png) no-repeat left 4px;color:#999}
+.loginArea .loginLink a:first-child {background:none;margin-left:0;padding-left:0;}
+.loginArea .loingForm .inpsw {width:110px;display:inline-block;position:relative;vertical-align:top;}
+.loginArea .loingForm .placeholderWrap {width:inherit !important;}
+/* 로그인후 */
+.loginArea.after {}
+.loginArea.after > .user {display:inline-block;margin:3px 10px 0 0;vertical-align:top;}
+.loginArea.after > .user span.ico {display:inline-block;height:16px;padding:3px 0 0 17px;vertical-align:middle;}
+.loginArea.after > .user span.ico.grade01 {padding-left:20px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico/ico_medal_1.png) no-repeat left 2px;}
+.loginArea.after > .user span.ico.grade02 {padding-left:20px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico/ico_medal_2.png) no-repeat left 2px;}
+.loginArea.after > .user span.ico.grade03 {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico/ico_medal_3.png) no-repeat left 2px;}
+.loginArea.after > .user span.ico.grade04 {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico/ico_medal_4.png) no-repeat left 2px;}
+.loginArea.after > .user span.ico.grade05 {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico/ico_medal_5.png) no-repeat left 2px;}
+.loginArea.after > .user span.ico.grade06 {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico/ico_medal_6.png) no-repeat left 2px;}
+.loginArea.after > .user strong {color:#f26f21;display:inline-block;}
+.loginArea.after .loginLink a em {color:#52c7b8;font-weight:bold;}
+.loginArea.after .btnMymenu {display:inline-block;width:73px;height:23px;margin-left:5px;vertical-align:top;position:relative;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_my_meun.png) no-repeat left 0;font-size:0;}
+.loginArea.after .btnMymenu.open {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_my_menu_open.png) no-repeat left 0;}
+
+/* 마이메뉴 레이어 */
+.gnbmyLyr.on {}
+.gnbmyLyr {display:block;overflow:hidden;position:absolute;top:44px;width:280px;height:270px;background:#fffae3;border:1px solid #989898;z-index:1000;}
+.gnbmyLyr .tit {display:block;margin-bottom:10px;padding-left:20px;font-size:15px;color:#52c7b8}
+.gnbmyLyr > .btnArea {margin-top:0 !important; position:absolute !important;left:0;bottom:0;width:100%;}
+.gnbmyLyr > .btnArea > a:first-child {width:92px;border-left:0 !important;}
+.gnbmyLyr > .btnArea > a {display:inline-block;width:93px;height:35px;float:left;margin-left:0 !important;background:#b2b2b2;text-align:center;border-left:1px solid #ffffff;text-align:center;}
+.gnbmyLyr > .btnArea > a > span {display:inline-block;vertical-align:top;margin-top:10px;padding-right:9px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico_bl_arr.png) no-repeat right 5px;);color:#fff;}
+.gnbmyLyr .newCourse {padding:18px 25px;border-bottom:1px solid #e1e1e1;background:#fff;}
+.gnbmyLyr .newCourse .tit{background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_new_course.png) no-repeat left top;)}
+.gnbmyLyr .newCourse .txt {float:none !important;text-align:left !important;overflow:hidden;letter-spacing:-1px;width:230px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+.gnbmyLyr .newCourse .btnArea {text-align:left;margin-top:7px;}
+.gnbmyLyr > .missionIng {padding:10px 25px 0 25px !important;}
+.gnbmyLyr > .missionIng .tit {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_new_course.png) no-repeat left top;)}
+.gnbmyLyr > .missionIng ul li .day {display:inline-block;width:23px;height:10px;margin-right:10px;padding:4px 6px;text-align:left;line-height:11px;color:#fff;font-size:11px;}
+.gnbmyLyr > .missionIng ul li:first-child {margin-top:0;}
+.gnbmyLyr > .missionIng ul li.study .day {background:#fa6a6a;}
+.gnbmyLyr > .missionIng ul li.event .day {background:#2a87c4;}
+.gnbmyLyr > .missionIng ul li.special .day {background:#b567df;}
+.gnbmyLyr > .missionIng ul li {margin-top:5px;}
+.gnbmyLyr > .missionIng ul li a {overflow:hidden;display:inline-block;letter-spacing:-1px;width:170px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;vertical-align:top;}
+
+/* gnb */
+#gnb {background: #fff; letter-spacing:-0.5px;border-top:1px solid #e9e9e9; width:100%;}
+#gnb .gnbWrap {position:relative; overflow:hidden; width:1080px; margin:auto; height:55px;}
+#gnb .gnbMenu {overflow:hidden; float:left; margin-top:7px;}
+#gnb .gnbMenu > li {float:left; text-align:center; margin-right:93px;}
+#gnb .gnbMenu > li:last-child{margin-right:0px;}
+#gnb .gnbMenu > li.on{position:relative;}
+#gnb .gnbMenu > li a.on{position:relative; color:#8553b3; width:auto}
+#gnb .gnbMenu > li a.on:after{display:inline-block; content:''; position:absolute; left:0; right:0; bottom:-23px; background:#8553b3; height:3px}
+
+#gnb .gnbMenu > li a:hover {color:#8553b3;text-decoration:none;}
+#gnb .gnbMenu > li:first-child a{background:none;}
+#gnb .gnbMenu > li > a {display:inline-block; width:auto; padding:10px 0px; font-size:18px; color:#000; font-family:'Noto Sans KR', Dotum, '돋움', Arial, sans-serif; line-height:1.2;}
+/* 2022-09-19 #89949 New 아이콘 추가 */
+#gnb .gnbMenu > li a.gnbIcoNew {position:relative;}
+#gnb .gnbMenu > li a.gnbIcoNew:before {display:inline-block; content:''; position:absolute; top:5px; right:-16px; width:13px; height:13px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico_s_new.png) no-repeat;}
+
+#gnb .gnbSch {padding-top:13.5px; min-width:163px;}
+#gnb .gnbSch > a {display: block;float: left; vertical-align:top; width:55px;height:55px;text-indent:-9999; font-size:0;}
+#gnb .gnbSch > a.btnSch {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_sch.png) no-repeat center center;}
+#gnb .gnbSch > a.btnSch.btnSchClose {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_sch_close.png) no-repeat center center;}
+#gnb .gnbSch > a.allMenu {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_allmenu.png) no-repeat center center;} /*margin-right:58px;*/
+
+
+/* 2018.03월경 드림스쿨, 달자네 개편 오픈 시*/
+/* #gnb .gnbMenu > li > a {padding:10px 35px; border:1px solid red} */
+
+/* 2018.02월경 웹사이트통합검색 확장버전 오픈 시 : s */
+#gnb .gnbWrapNewAll{position: relative; width:100%;}
+#gnb .gnbWrapNewAll h1{padding:26px 40px 0 58px;}
+#gnb .gnbWrapNew {display:flex; justify-content:space-between; flex-wrap:nowrap; overflow:hidden; /*margin:auto;*/ height:84px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/gnb_line.png) repeat-x 0 bottom;}
+#gnb .gnbWrapNew .gnbMenu {overflow:hidden; min-width:1080px; width:1080px; margin-top:20px; margin-left:-40px; box-sizing:border-box;}
+#gnb .gnbWrapNew .gnbMenu:after{display:block;content:'';width:0;height:0;line-height:0;}
+#gnb .gnbWrapNew .gnbMenu > li.myStudy{float:right;height:55px;margin-top:-7px;color:#c1d7e5;font-size:15px;background:#3b0378}
+#gnb .gnbWrapNew .gnbMenu > li.myStudy a {color:#c1d7e5; font-size:15px !important;height:55px;padding:20px 28px 20px 50px;background:none;background: url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_my_study.png) no-repeat 29px 23px;box-sizing:border-box;}
+#gnb .gnbWrapNew .gnbMenu > li.myStudy a:hover {color:#ffea00; background: url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_my_study_on.png) no-repeat 29px 23px;}
+.loginSchWrap .searchArea .srchBar{position:relative;display:inline-block;width:208px;margin:0 auto}
+.loginSchWrap .searchArea .srchBar .input{width:179px;height:23px;padding:3px 7px 5px;line-height:1;border:1px solid #0082d3;border-right:none;box-sizing:border-box;}
+.loginSchWrap .searchArea .srchBar .placeholderGuidetext{top:2px}
+.loginSchWrap .searchArea .srchBar .btnSrch{position:absolute;top:0;right:0;display:inline-block;width:29px;height:23px;text-indent:-9999px;font-size:0;background:#0082d3 url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_srchbar.png) no-repeat center center}
+/* 2018.02월경 웹사이트통합검색 확장버전 오픈 시 : e */
+
+/* 전체메뉴 */
+.allMenuWrap {background:#fff; display:none; width:100%; height:inherit; padding:0; border-bottom:1px solid #e1e1e1; position:absolute; left:0; top:0; overflow:hidden; z-index:2100;}
+.allMenuWrap.on {/*display:block;*/}
+.allMenuArea {position:relative;display: table; width:1080px; margin: auto; padding:36px 0 53px;}
+.allMenuArea > li:first-child {border-left: none; padding-left:0}
+.allMenuArea > li:nth-child(2){width:246px;}
+.allMenuArea > li:nth-child(4){width:246px;}
+.allMenuArea > li:last-child{width:128px;}
+.allMenuArea > li {display:table-cell; width:230px; position:relative; /*background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_dot.png) no-repeat 0 10px;*/}
+.allMenuArea > li > a:first-child {margin-top:0;}
+.allMenuArea > li > a {display:inline-block; color:#222; font-size:18px; font-weight:500; width:100%; padding:15px 0 12px 0; font-family:'Noto Sans Medium', Dotum, '돋움', Arial, sans-serif;}
+.allMenuArea .subMenu {margin-top:10px;}
+.allMenuArea .subMenu > li:first-child {margin-top:0;}
+.allMenuArea .subMenu > li.etc {margin-top:30px;}
+.allMenuArea .subMenu > li {margin-top:10px}
+.allMenuArea .subMenu > li > a {display:inline-block; font-size:13px; color:#555; letter-spacing:-1px;}
+.allMenuArea .subMenu > li > ul {margin-top:15px;}
+.allMenuArea .subMenu > li > ul li:fisrt-child {margin-top:0;}
+.allMenuArea .subMenu > li > ul li {margin-top:5px;}
+.allMenuArea .subMenu > li > ul li a {padding-left:10px;color:#898989;font-size:12px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bl_sub_menu02.png) no-repeat left 7px;}
+.allMenuArea .listBnnr{position:absolute;left:0;bottom:0;height:207px}/* 2023-08-31 수정*/
+.allMenuArea .listBnnr li+li{margin-top:5px}
+
+.allMenuHeader{height:91px; background:linear-gradient(90deg, rgba(80,71,165,1) 0%, rgba(96,71,165,1) 35%, rgba(115,71,165,1) 100%); color:#fff;}
+.allMenuHeader .title{position:relative; width:1080px; min-width:1080px; margin:0 auto;}
+.allMenuHeader .title h2{font-size:26px; padding-top:28px; letter-spacing:-.8px; font-family:'Noto Sans Medium', Dotum, '돋움', Arial, sans-serif;}
+.allMenuHeader .title a.allMenuPopClose{position:absolute; top:20px; right:-15px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_allmenu_close.png) no-repeat; z-index:2000; width:55px; height:55px;}
+
+.allMenuFooter{height:63px; background:#f9f5fa;}
+.allMenuFooter .info{width:1080px; height:65px; margin:0 auto; background:#f9f5fa; display:flex; display:-ms-flex; justify-content:space-between;}
+.allMenuFooter .info ul{display:flex; display:-ms-flex;}
+.allMenuFooter .info ul li{padding:0 33px; line-height:65px;}
+.allMenuFooter .info ul li:after{display:inline-block; content:''; background:#d8d8d8; width:1px; height:13px; position:relative; left:33px}
+.allMenuFooter .info ul li:first-child{padding:0 33px 0 0}
+.allMenuFooter .info ul li:last-child:after{display:none}
+.allMenuFooter .info ul li a{font-size:17px; color:#222; font-family:'Noto Sans Medium', Dotum, '돋움', Arial, sans-serif; letter-spacing:-1px}
+
+.allMenuFooter span.sns{display:flex; display:-ms-flex; padding-top:23px;}
+.allMenuFooter span.sns a{display:block; height:16px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/sns_ico_02.png) no-repeat 0 0; padding:0;}
+.allMenuFooter span.sns a.sns01{width:20px; background-position:0 0;}
+.allMenuFooter span.sns a.sns02{width:27px; background-position:-20px 0}
+.allMenuFooter span.sns a.sns03{width:26px; background-position:-47px 0}
+.allMenuFooter span.sns a.sns04{width:34px; background-position:-73px 0}
+.allMenuFooter span.sns a.sns05{width:24px; background-position:-107px 0}
+.allMenuFooter span.sns a.sns06{width:16px; background-position:-131px 0; margin-right:27px}
+
+/* 검색 */
+.allSchView {display:none; background:#fff; width:100%; height:164px; position:absolute; left:0; border-bottom:1px solid #e1e1e1; z-index:4000; overflow:hidden}
+.allSchView.on {/*display:block;*/}
+/* .allSchView .searchCont {overflow:hidden;position:relative; width:1080px; margin:18px auto 0;} */
+.allSchView .searchHit {float:left;margin-top:10px;}
+.allSchView .searchHit strong.tit {display:inline-block;float:left;color:#7847a5;padding-left:10px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bl_blue_dot01.png) no-repeat left 8px;font-size:13px;}
+.allSchView .searchHit ul.list {overflow:hidden;float:left;margin-left:25px;}
+.allSchView .searchHit ul.list li:first-child {margin-left:0;}
+.allSchView .searchHit ul.list li {float:left;font-size:13px;margin-left:30px;margin-top:0 !important;padding-left:0 !important;}
+.allSchView .searchHit ul.list li a {color:#333;}
+.allSchView .searchInbox {position:relative; width:815px; height:76px; line-height:76px;border-bottom:2px solid #191919; margin:33px auto 0;}
+.allSchView .searchInbox input {float:left; width:740px; height:72px; line-height:50px; border:none; font-size:30px; color:#333;}
+.allSchView .searchInbox input::placeholder{color:#dadada; font-weight:bold; letter-spacing:-2px;}
+.allSchView .searchInbox .placeholderGuidetext {font-size:13px; top:8px; left:0;}
+.allSchView .searchInbox .btnSchTotal {position:absolute; right:0; top:12px; display:inline-block; width:52px; height:52px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_in_sch_03.png) no-repeat right top; font-size:0; text-indent:-9999;}
+.dimPop{position:absolute; top:0; background:transparent; width:100%; height:100%; z-index:3000; opacity:.6; display:none}
+
+/* wrap */
+.wrap2 {position:relative;min-width:1450px;margin:auto;}
+
+/* 퀵메뉴 (23-01-17 수정) */
+.wrapQuick{width:1080px;position:absolute;left:50%;margin-left:-540px;top:25px;z-index:100}
+.wrapQuick .tit{position:absolute;top:-99999px;font-size:0;height:0;width:0;text-indent:-999}
+.wrapQuick .txt{padding:5px 0;color:#82858d;font-size:11px;text-align:center}
+.wrapQuick .txt label{margin-left:3px}
+.quickLlist{width:149px;position:absolute;right:-179px;border-top:solid 1px #eaeaea;border-bottom:solid 1px #eaeaea}
+.quickLlist li{background:#fff;border:solid 1px #eaeaea;border-bottom:none;font-size:12px;font-weight:400}
+.quickLlist li.etc{border:none}
+.quickLlist li a{display:block;padding:0;font-weight:600;color:#222;width:147px}
+.quickLlist li a:hover{text-decoration:none}
+.quickLlist li.qAilecture a,.quickLlist li.qSample a,.quickLlist li.qGuide a{line-height:40px;text-indent:40px;letter-spacing:-1px}
+.quickLlist li.qAilecture{border-top:none}
+.quickLlist li.qAilecture a:before{content:"";display:none;width:30px;height:30px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/quick_banner_ai_blit_v2.png) no-repeat;position:absolute;top:0;left:0;z-index:1}
+.quickLlist li.qGuide{margin-bottom:10px;border-bottom:solid 1px #eaeaea}
+.quickLlist li.qAilecture a{background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico_qAilecture.png) no-repeat 9px center;color:#8356eb}
+.quickLlist li.qSample a{background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico_qSample.png) no-repeat 11px 14px}
+.quickLlist li.qGuide a{background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico_qGuide.png) no-repeat 14px center}
+.quickLlist li.etc a{padding:0;font-size:0}
+.quickLlist li.ibnr{border:none;display:block}
+.quickLlist li.top a{padding:11px 0 11px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_quick_top.png) no-repeat center 8px #f8f8f8}
+
+/*채팅상담 서비스 (23-01-17 수정) */
+.wrapQuick .chatWrap{display:none}
+.wrapQuick.addChatbot .chatWrap{display:block;position:fixed;bottom:95px;right:345px;z-index:3000} /* 23.03.29 챗봇 위치 수정 */
+.chatWrap .chatbot{width:110px;height:110px;position:relative;box-sizing:border-box}
+.chatWrap .chatbot .container{behavior:url(/Css/new/PIE.htc);width:110px;height:110px;background:#7444ff;border-radius:50%;display:block;text-decoration:none;overflow-y:hidden}
+.chatWrap .chatbot .btnClose{font-size:0;width:19px;height:19px;background:url(//cdndata.milkt.co.kr/high/www/img_new/chatbot/btn_close_20220608.png) no-repeat;background-size:19px}
+.chatWrap .chatbot .objBox span{display:block;width:88px;height:58px;position:absolute;bottom:-1px;left:50%;margin-left:-41px }
+.chatWrap .chatbot .txtBot{text-align:center;padding-top:15px;color:#feffb3;font-size:14px;line-height:1.2}
+.chatWrap .btnClose{position:absolute;top:10px;right:3px;z-index:999}
+.chatWrap .chatbot .objBox span{display:block;width:88px;height:58px;position:absolute;bottom:0;left:50%;margin-left:-44px }
+.chatWrap .objBox .obj01{background:url(//cdndata.milkt.co.kr/high/www/img_new/chatbot/ico_quick04_20220608.png) no-repeat;background-size:88px 58px} /* o-o */
+.chatWrap .objBox .obj02{background:url(//cdndata.milkt.co.kr/high/www/img_new/chatbot/ico_quick05_20220608.png) no-repeat;background-size:88px 58px} /* >-< */
+.chatWrap .objBox .obj03{background:url(//cdndata.milkt.co.kr/high/www/img_new/chatbot/ico_quick06_20220608.png) no-repeat;background-size:88px 58px} /* ♥-♥ */
+
+/* lnb */
+#lnbWrap {float:left; width:210px;height:100%; margin:0 30px 0 0; display:inline;box-sizing:border-box;position:relative}
+#lnbArea > .htit {height:100px;border:1px solid #e9e9e9;border-bottom:0;border-top:0;box-sizing:border-box;background:#fff;}
+#lnbArea > .htit > h2 {font-weight:bold;font-size:27px;color:#222;font-weight:bold;padding:40px 0 0 25px}
+ /* #lnbWrap:after{content:"";display:block;width:210px;height:100%;position:absolute;left:0;bottom:-80px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/lnb_bg.gif) repeat-y 0 0;} */
+.lnb {border:1px solid #e9e9e9;background:#fff;border-bottom:0;padding-bottom:45px;}
+.lnb > li:first-child {border:none;margin-top:20px;}
+.lnb > li {border-top:1px solid #e8e8e8;width:160px;margin-left:25px;line-height:20px;}
+.lnb > li.noSubOn a {background:none !important;color:#8553b3 !important;}
+.lnb > li.noSub a {background:none !important;}
+.lnb > li a:hover {color:#8553b3;}
+.lnb > li > a {display:block;font-weight:bold;padding:17px 20px 17px 0;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_lnb_pls.png) no-repeat 100% 20px;background-color:#fff !important;font-size:15px;color:#222;letter-spacing:0px}
+.lnb > li.on > a {color:#8553b3; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_lnb_minus.png) no-repeat 100% 20px;}
+.lnb > li.on > ul.dth2 {display:block;}
+.lnb > li.on > ul.dth2 li > a.on {color:#222;font-weight:bold;}
+.lnb > li.over > a{letter-spacing:-1px}
+.lnb ul.dth2 {display:none;padding:0 0 20px 0;background:#fff;}
+.lnb ul.dth2 > li:first-child {margin-top:0;}
+.lnb ul.dth2 > li.on > a {color:#8553b3;}
+.lnb ul.dth2 > li a:hover {color:#8553b3;}
+.lnb ul.dth2 > li > a {display:block;padding:5px 0 5px 10px;font-size:14px;color:#666;}
+.lnb ul.dth2 > li > a img {vertical-align:middle !important;margin:-2px 0 0 2px;}
+.lnb ul.dth3{margin-bottom: 10px;}
+.lnb ul.dth3 > h3{padding-left: 10px;margin-bottom: 6px;font-size: 12px;color: #222}
+.lnb ul.dth3::after{content: "";display: block;clear: both;}
+.lnb > li.on > ul.dth3 {display:block;}
+.lnb > li.on > ul.dth3:last-child{margin-bottom: 12px;}
+.lnb > li.on > ul.dth3 li > a.on {color:#222;font-weight:bold;}
+.lnb ul.dth3 > li{float: left;min-width: 70px;position: relative}
+.lnb ul.dth3 > li:first-child {margin-top:0;}
+.lnb ul.dth3 > li.on > a {color:#8553b3;font-weight: bold;}
+.lnb ul.dth3 > li a:hover {color:#8553b3;}
+.lnb ul.dth3 > li > a {display:block;padding:0 0 6px 10px;font-size:13px;color:#666;}
+.lnb ul.dth3 > li img{position: absolute;top: 4px;margin-left: 3px}
+
+/* lnb : 강좌찾기도우미 */
+.classSchGuide {margin:0;border-top:1px solid #e9e9e9;padding-bottom:15px;}
+.classSchGuide .htit {overflow:hidden;height:50px;background:#f4f4f4;border:1px solid #e9e9e9;border-bottom:0;border-top:0;}
+.classSchGuide .htit h2 {margin:16px 0 0 38px;padding:0 0 0 22px;font-weight:bold;font-size:15px;color:#222;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/lnb_search.png) no-repeat left 2px;}
+.classSchGuide ul {padding:10px 0;border:1px solid #e9e9e9;border-bottom:0}
+.classSchGuide ul:first-child {border-top:0;}
+.classSchGuide ul li{border-top:1px solid #e8e8e8;width:160px;margin-left:25px}
+.classSchGuide ul li:first-child{border-top:0;}
+.classSchGuide ul li a {display:block;padding:12px 0;font-size:13px;color:#666;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bl_lnb_s_arr.gif) no-repeat 100% 16px;}
+.classSchGuide ul li a.doubleline {background-position-y:24px;}
+
+
+/* lnb : 고객센터 */
+.lnbCustomer {padding:37px 23px 25px 23px;border:1px solid #e9e9e9;background:#fff;border-bottom:0;box-sizing:border-box}
+.lnbCustomer h2 {font-size:14px;color:#1f1f1f;font-weight:bold; margin-bottom:17px;}
+.lnbCustomer h2 .tell {display:block;font-size:24px;}
+.lnbCustomer h2 .bntArsIfo {display:inline-block;width:102px;height:21px;margin-top:6px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_ars_v2.png) 0 0 no-repeat; font-size:0;text-indent:-99999px}
+.lnbCustomer dl {overflow:hidden;}
+.lnbCustomer dl dd:first-child {margin-top:0;}
+.lnbCustomer dl dd {margin-top:4px;font-size:14px;color:#888;}
+.lnbCustomer dl dd strong {display:inline-block;width:65px;color:#1f1f1f;font-weight:normal}
+.lnbCustomer dl dd.etc {font-size:13px;font-weight:bold;padding-top:17px;}
+.lnbCustomer dl dd.etc em {color:#1f1f1f}
+.lnbCustomer dl dd .tell {color:#713ea0;}
+.lnbCustomer dl dd .space.w2 {width:2px;}
+.lnbCustomer dl dd .space {width:18px;display:inline-block;}
+.supportGuide {margin:0;border-bottom:1px solid #e9e9e9;}
+.supportGuide ul {padding:10px 0;border:1px solid #e9e9e9;border-bottom:0}
+.supportGuide ul li{border-top:1px solid #e8e8e8;width:160px;margin-left:25px}
+.supportGuide ul li:first-child{border-top:0;}
+.supportGuide ul li a {display:block;padding:12px 0;font-size:13px;color:#666;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bl_lnb_s_arr.gif) no-repeat 100% 16px;}
+.supportGuide ul li a i{float:left;height:25px;margin:2px 8px 0 0;}
+.supportGuide ul li a.doubleline {background-position-y:24px;}
+
+/*lnb : test zone / 학습자료실 */
+.lnbSmenu {margin-bottom:10px;display:none!important}
+
+
+/* lnb : 선생님 */
+#lnbArea.teacherLnb .htit{background: #8553b3}
+#lnbArea.teacherLnb .htit h2{padding: 24px 0 0 25px;color: #fff;font-size: 20px;line-height: 27px;}
+#lnbArea.teacherLnb .htit a{text-decoration: none;}
+.teacherLnb .htit h2 span{font-weight: normal;font-size: 15px}
+.teacherLnb .lnb > li:first-child{margin-top: 9px;}
+.teacherLnb li a{padding: 17px 0 17px 0;letter-spacing: -0.5px;}
+.teacherLnb li a span{color: #8553b3}
+.teacherLnb li a p{font-size: 13px;color: #666;font-weight: normal;line-height: 27px}
+.teacherLnb li a p strong{color: #222}
+.teacherLnb li .dth2{margin: -3px 0 25px 8px}
+.teacherLnb li a img {vertical-align: -1px;margin-left: 6px}
+.teacherLnb .lnb > li {width: auto;}
+
+/* fulll width 100% */
+#container{overflow:hidden;position:relative;width:100%;}
+#container.wrapTchrHome{background:url(//cdndata.milkt.co.kr/high/www/Img_new/teacher/bg_full_tchr.jpg) repeat-x 0 0;}
+#contents {margin:0 auto!important;padding-bottom:80px; padding-top:0 !important;  background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/lnb_bg.gif) repeat-y 0 154px }/*lnb UI유지하고 세로라인 끝까지 확장, contents > lnbWrap 가없으면 라인 삭제  common.js 참고*/
+#content {/* margin-top:15px;float:left; width:720px;min-height:800px; color:#6b6b6b; position:relative; */}
+
+/* footer */
+#footer {clear:both; background:#fff; width:100%; min-height:268px;letter-spacing:-0.5px;}
+#footer .footTop {border-top:1px solid #e1e1e1; min-width:1450px; margin:0 auto; border-bottom:1px solid #e1e1e1;background-color:#fff;}
+#footer .footTopCont {position:relative; height:63px; width:1080px; margin:0 auto;}
+#footer .guideMenu {position:absolute; left:0; overflow:hidden;}
+#footer .guideMenu li {float:left; margin-top:25px; padding:0 18px 0 19px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bl_foot_top.png) no-repeat left 4px; line-height:1.2;}
+.safari #footer .guideMenu li{padding:0 17px 0 19px}
+#footer .guideMenu li:first-child {padding-left:0;background:none;}
+#footer .guideMenu li a {font-size:14px; font-weight:500; color:#444;}
+#footer .linkgoArea {position:absolute; right:0; margin-right:-25px}
+#footer .linkCs {float:left;width:159px;height:53px;border-right:1px solid #e1e1e1;text-align:center;}
+#footer .linkCs a {display:inline-block;margin-top:18px;padding-left:16px;font-weight:500;font-size:13px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_customer_go.png) no-repeat left 3px;color:#f26f21;}
+#footer .linkFmSite {float:left;width:138px;height:53px; }
+#footer .linkFmSite .selectboxWrap {border:none;}
+#footer .linkFmSite .selectboxWrap .selectResult {font-size:15px; text-transform:uppercase; height:63px; line-height:63px; font-weight:bold; padding-right:0; border:none; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/select_fmy_arrow.gif) 100px center no-repeat;}
+#footer .linkFmSite .selectboxWrap .selectList li {font-size:13px;}
+#footer .linkFmSite .selectboxWrap .selectList {width:137px;}
+#footer .linkFmSite .selectboxWrap .selectStyle {height:63px;}
+#footer .linkFmSite .selectboxWrap .selectStyle ul {top:auto;z-index:999 !important;overflow-x:hidden}
+#footer .linkFmSite .selectboxWrap .selectStyle ul.reversal {bottom:53px;}
+
+#footer .footBtm {position:relative ;overflow:hidden; width:1080px; margin:0 auto; padding:30px 0 42px 0; font-size:12px; color:#a0a2a4;}
+#footer .footLogo {float:left;}
+#footer .footInfoArea {float:left;margin-left:30px;}
+#footer .footInfo li:first-child {margin-top:0;}
+#footer .footInfo li {margin-top:8px;color:#888}
+#footer .footInfo li span:first-child {padding-left:0 !important;}
+#footer .footInfo li span {padding-left:8px;}
+#footer .footInfo li span a {color:#a0a2a4;}
+#footer .footInfo li span a em {color:#888;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/arrow_f_btm.png) no-repeat 44px 7px;border-bottom:1px solid #c9c9c9}
+#footer .footInfo li.last span{padding-left:16px;}
+#footer .contac {margin-top:28px;font-size:12px;color:#888;}
+#footer .contac span {padding-left:14px;}
+#footer .contac span:first-child {padding-left:0;}
+#footer .contac span em a{color:#888;}
+#footer .ismsMark{position:absolute;bottom:77px;right:0;} /* 2023-02-09 수정 */
+#footer .ePubMark{position:absolute;top:73px;right:82px;}
+#footer .copyRight {margin-top:27px; font-size:10px; color:#cfcfcf;}
+#footer .safety {float:right;}
+#footer .safety .tit {font-size:12px;color:#d3d4d5;}
+#footer .safety .txt {margin-top:11px;line-height:17px;}
+#footer .safety .btn {display:inline-block;margin-top:4px;padding:4px 8px 4px 0;border-bottom:1px solid #64696e;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/arrow_f_btm.png) no-repeat right 9px;color:#b8babc;}
+#footer .footSns {overflow:hidden;margin-top:15px;}
+#footer .footSns a {float:left;margin-left:3px;display:block;height:28px;width:29px; background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/ico_foot_sns.png) no-repeat;font-size:0;}
+#footer .footSns a:first-child {margin-left:0;}
+#footer .footSns a.ico_Blog {background-position:0 0;}
+#footer .footSns a.ico_Facebook {background-position:-31px 0;}
+#footer .footSns a.ico_kakao {background-position:-62px 0;}
+#footer .footSns a.ico_youtube {background-position:-94px 0;}
+
+/* footer 임시 */
+#footer .footBtm.newFooter .footInfoArea {float:left;margin-left:20px;}
+#footer .footBtm.newFooter .addFoot{clear:both;padding-top:50px}
+#footer .footBtm.newFooter .safety{float:none;position:absolute;top:30px;right:0}
+#footer .footBtm.newFooter .safety .txt{margin-top:5px;}
+#footer .footBtm.newFooter .safety .footSns{margin-top:105px;}
+
+/* layerPopArea - 레이어팝업 */
+.popupWrap{display:none;width:100% !important;position:absolute;top:0;right:0;bottom:0;left:0;outline:none;z-index:9999;}
+.popupWrap.loginPop{position:absolute; top:172px;}
+.popupWrap.w815 .layerPop,
+.popupWrap.sizeXl .layerPop{width:815px;}
+.popupWrap.w760 .layerPop{width:760px;}
+.popupWrap.w745 .layerPop,
+.popupWrap.sizeLg .layerPop{width:745px;}
+.popupWrap.w665 .layerPop,
+.popupWrap.sizeMd .layerPop{width:665px;}
+.popupWrap.w620 .layerPop,
+.popupWrap.sizeSm .layerPop{width:620px;}
+.popupWrap.sizeSm .bodyCont{padding:32px 40px 0 40px;}
+.popupWrap.w560 .layerPop,
+.popupWrap.sizeXs .layerPop{width:560px;}
+.popupWrap.sizeXXs .layerPop{width:420px;}
+.popupWrap.sizeXXs .layerPop .bodyCont{padding:25px 25px 0 !important;}
+.popupWrap.sizeXXXs .layerPop{width:400px;}
+.popupWrap.sizeXXXs .layerPop .bodyCont{padding:25px 25px 0}
+
+/* layerPopArea - 레이어팝업 */
+.layerPop{position:fixed;left:0;right:0;width:520px;margin:0 auto;z-index:9990;background:#fff;}
+.layerPop .header{overflow:hidden;height:55px;background:#7847a5;}
+.layerPop .header h2{margin:18px 0 0 20px;color:#fff;font-size:17px;}
+.layerPop .bodyCont{position:relative;padding:40px;padding-bottom:0;overflow-y:auto;max-height:600px;}
+.layerPop .bodyCont:after{content:'';display:block;height:40px;} /* ie padding-bottom 오류 대응 */
+.layerPop .bodyCont.scroll{overflow:hidden;overflow-y:auto;height:100%;padding:25px 30px 50px 40px;margin:0 10px 0 0;}
+.layerPop .bodyCont.unsetOverflow{overflow:unset !important;}
+.layerPop .bodyCont.pdNone {padding:40px 0 !important;}
+.layerPop > .btnClose{position:absolute;right:20px;top:20px;width:17px;height:17px;text-indent:-999px;overflow:hidden;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_btn_close.png) no-repeat;z-index:13;}
+.layerPop .topTxt {margin-bottom:20px;}
+.layerPop .bmTxt {margin-top:20px;}
+.layerPop .btnArea {margin-top:30px;}
+.popupWrap .layerPop .titMd{padding-left:22px;margin:20px 0 6px;font-weight:bold;font-size:14px;color:#61b79f;background: url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_msion_chk.png) no-repeat 0 4px;}
+.popupWrap .layerPop .txt{font-size:12px;line-height:1.5;}
+.popupWrap .layerPop .ulList01 li{margin-top:5px;font-size:12px;}
+.popupWrap .layerPop .milktGuide dl{position: relative; display:flex; flex-direction: column; justify-content: center;}
+.popupWrap .layerPop .milktGuide dl dt::before{content: ''; display:inline-block; position:absolute; bottom:5px; left:0; width:182px; height:96px; background: url(//cdndata.milkt.co.kr/high/www/Img_new/mystudy/ico_graph.png) no-repeat 0 0;}
+.popupWrap .layerPop .milktGuide dl dt{font-size:18px; color:#7847a5; font-weight: bold; padding-left:195px;}
+.popupWrap .layerPop .milktGuide dl dd{font-size:14px; color:#484848; line-height:20px; margin-top:20px; padding-left:195px;}
+.popupWrap .btnArea.chkBtn{padding-top:16px;border-top:1px solid #e1e1e1;}/*  오늘하루 보지않기 */
+.popupWrap .btnArea.chkBtn .checkboxWrap{margin-top:12px;}
+.popupWrap .btnArea.chkBtn .bigdkGry{padding:0 10px !important;line-height:45px;color:#fff;font-size:14px;cursor:pointer;}
+.popupWrap .btnArea.chkBtn select{width:184px;font-size:12px;color:#777775;border:1px solid #e6e6e6;}
+.popupWrap .btnArea.chkBtn .checkboxWrap .checkStyle{vertical-align:middle;}
+    /* alert 팝업창 */
+.popupWrap.alertPop{text-align: center}
+.popupWrap.alertPop .bodyCont{font-size: 13px;line-height: 20px;color: #666}
+.popupWrap.alertPop .layerPop{width: 320px}
+.popupWrap.alertPop .btnBox{display: flex;justify-content: space-between}
+.popupWrap.alertPop .btnBox a{display: block;width: 50%;height: 46px;line-height: 46px;color: #fff;font-weight: bold;font-size: 15px;text-decoration: none}
+
+.layerPop > .btnClose{position:absolute; right:20px;top:20px; width:17px;height:17px;text-indent:-999px;overflow:hidden;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_btn_close.png) no-repeat;z-index:13;}
+
+/* 레이어팝업_밀크T고등 환영 211116 */
+.lpop_welcome .layerPop{position:fixed;top:50%;left:50%;margin:-245px 0 0 -347px;width:695px;height:490px;}
+.lpop_welcome .layerPop .btn_close{position:absolute;top:7px;right:7px;width:50px;height:50px;font-size:0;text-indent:-9999rem;}
+.lpop_welcome .layerPop .btnArea{padding:21px 0;margin:0 20px 0;line-height:39px;}
+.lpop_welcome .layerPop .btnArea label,
+.lpop_welcome .layerPop .btnArea .inputCheckbox,
+.lpop_welcome .layerPop .btnArea .checkboxWrap .checkStyle{vertical-align:middle !important;}
+.lpop_welcome .layerPop .btnArea a{height:40px;width:120px;padding:0;font-size:13px;color:#fff;text-align:center;line-height:40px;}
+.lpop_welcome .layerPop .btnArea a.sizeS{width:80px;}
+
+/*  로그인 */
+.loginPop .layerPop{position:fixed; left:0; right:0;  width:465px; margin:0 auto; z-index:9990; background:#fff; border:1px solid #222}
+.loginPop .layerPop .header{overflow:hidden; height:81px; background:#fff;}
+.loginPop .layerPop .header h2{margin:48px 0 0 54px; color:#222; font-size:28px; font-weight:bold}
+.loginPop .layerPop .bodyCont{position:relative; padding:30px 54px; padding-bottom:0;overflow-y:auto;max-height:600px;}
+.loginPop .layerPop .bodyCont{position:relative; padding:30px 54px; padding-bottom:0;overflow-y:auto;max-height:600px;}
+.loginPop .layerPop > .btnClose{position:absolute; right:54px; top:55px; width:17px;height:17px;text-indent:-999px;overflow:hidden;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bg_btn_close_02.png) no-repeat;z-index:13;}
+.loginPop .layerPop .btnArea .btns.bigOrg{width:100%}
+
+.loginWrap ul li:first-child{margin-bottom:8px}
+.loginWrap .checkboxWrap{padding:14px 0 0}
+.loginWrap input.intxt{height:49px !important; font-size:15px}
+
+.loginPop .idpwSer ul{display:flex; display:-ms-flex; justify-content:center; margin-top:20px;}
+.loginPop .idpwSer ul li{position:relative; padding:0 13px}
+.loginPop .idpwSer ul li:after{display:inline-block; content:''; background:#d7d7d7; width:1px; height:9px; position:absolute; left:0; top:4px}
+.loginPop .idpwSer ul li:first-child:after{display:none}
+
+.layerPop .btnArea a{box-sizing:border-box;}
+.loginPop .btns.bigOrg {height:60px; min-width:70px; padding:0 35px; background-color:#7847a5;}
+.loginPop .btns.bigOrg span {margin-top:16px;font-weight:bold; font-size:20px; color:#fff;}
+
+
+/* 딤 */
+.dim{display:block;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background:#000;opacity:0.6;filter:alpha(opacity=60);z-index:999;}
+
+/* chatbot */
+/* 항상 고정 위치일 경우  */
+.ifrmChatbot{overflow:hidden;position:absolute;top:60px;left:50%;width:400px;height:629px;margin-left:89px;border:1px solid #acb7c2;box-shadow:0px 10px 32px 0px rgba(0,0,0,.15);background:#ededed;z-index:9998;}
+.ifrmChatbot.fixed{position:fixed;top:50%;margin-top:-345px;}
+.ifrmChatbot > .ifrm{width:100%;height:100%;}
+/* 퀵메뉴와 같은 위치일 경우 *
+.ifrmChatbot{overflow:hidden;position:absolute;top:608px;left:50%;width:400px;height:688px;margin-left:110px;margin-top:33px !important;border:1px solid #acb7c2;box-shadow:0px 10px 32px 0px rgba(0,0,0,.15);background:#ededed;z-index:9999;}
+.ifrmChatbot > .ifrm{width:100%;height:100%;}
+/
+/* 오른쪽 하단에 위치할 경우
+.ifrmChatbot{overflow:hidden;position:fixed;bottom:30px;right:30px;width:400px;height:688px;box-shadow:0px 10px 32px 0px rgba(0,0,0,.15);background:#ededed;z-index:9999;}
+.ifrmChatbot > .ifrm{width:100%;height:100%;}
+*/
+/* 오른쪽 하단에 챗봇 아이콘이 있을 경우 */
+.chatbotWrap{position:fixed;bottom:29px;right:43px;width:77px;height:77px;}
+.chatbotWrap .objMilky{position:relative;display:block;width:77px;height:77px;}
+.chatbotWrap .objMilky .obj{behavior:url(/Css/new/PIE.htc);overflow:hidden;position:relative;display:inline-block;width:77px;height:77px;border-radius:39px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/chatbot/bg_milky01.png) no-repeat;}
+.chatbotWrap .objMilky .obj div[class^=type]{position:absolute;top:0;left:0;display:inline-block;width:77px;height:77px;opacity:0;filter:alpha(opacity=0)}
+.chatbotWrap .objMilky .obj div.typeA{background:url(//cdndata.milkt.co.kr/high/www/Img_new/chatbot/obj_milky01.png) no-repeat;opacity:1;filter:alpha(opacity=100)}
+.chatbotWrap .objMilky .obj div.typeB{background:url(//cdndata.milkt.co.kr/high/www/Img_new/chatbot/obj_milky02.png) no-repeat;}
+.chatbotWrap .objMilky .obj div.typeC{background:url(//cdndata.milkt.co.kr/high/www/Img_new/chatbot/obj_milky03.png) no-repeat;}
+.chatbotWrap .objMilky .msg{behavior:url(/Css/new/PIE.htc);position:absolute;top:-33px;left:50%;display:inline-block;width:84px;height:26px;margin-left:-42px;padding:5px 0 0 0;text-align:center;border-radius:13px;background:#0094d9;box-sizing:border-box;}
+.chatbotWrap .objMilky .msg:after{content:'';position:absolute;bottom:-4px;left:50%;display:block;margin-left:-3px;width:6px;height:4px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/chatbot/obj_tail04.png) no-repeat;}
+.chatbotWrap .objMilky .msg span{font-size:12px;color:#fff;letter-spacing:-1px;}
+.chatbotWrap .btnClose{position:absolute;bottom:0;right:-20px;}
+.chatbotWrap .btnClose a{display:block;width:15px;height:15px;text-indent:-9999px;font-size:0;background:url(//cdndata.milkt.co.kr/high/www/Img_new/chatbot/btn_close_chatbot.png) no-repeat;}
+
+/* for mobile rendering */
+@media(max-width:767px){
+	/* .wrap,
+	body > #wrapper,
+	.wrap > div,
+	#footer,
+	[class^=mainTopBnnr]{overflow:hidden;min-width:1020px !important;}
+	.wrapQuick{display:none} */
+}
+
+@media(max-width:1600px){
+	#gnb .gnbWrapNew .gnbMenu {margin-left:0;}
+}
+
+
+
+/*isms layerpopup*/
+.popupWrap.popIsms{overflow:hidden;}
+.popupWrap.popIsms .layerPop {position:absolute;bottom:140px;left:50%;width:754px;height:464px;margin:-173px 0 0 -428px;z-index:1001;background:none}
+.popupWrap.popIsms .ismsbody {position: relative;}
+.popupWrap.popIsms .ismsbody .cnt img{border:2px solid #000;}
+.popupWrap.popIsms .ismsbody .btnClose{position:absolute; right:0;top:0;}
+.popupWrap.popIsms .layerPop .btnClose{position:absolute;right:0px;top:0px;width:40px;height:40px;text-indent:-999px;overflow:hidden;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/close_isms.jpg);z-index:13;}
+
+
+/*고등 테스트 브릿지 페이지 확장*/
+.wrapBridge{width:840px!important;}
+
+.pageTopBnr{margin-bottom:9px;}
+
+/*고등 실력 진단평가 서비스 종료 안내*/
+.popupWrap.sizeSm.serviceClose_201123 .bodyCont{padding:40px 30px 25px;}
+.serviceClose_201123 .layerPop .header{height:60px;  text-align:center;}
+.serviceClose_201123 .layerPop .header h2{font-size:22px; line-height:60px; margin:0;}
+.serviceClose_201123 .layerPop .bodyCont:after{display:none;}
+.serviceClose_201123 .layerPop > .btnClose{background:url('//cdndata.milkt.co.kr/high/www/Img_new/common/bg_btn_close_v2.png') no-repeat center;}
+.popTestServiceClose.serviceClose_201123 .txt01{text-align:left; letter-spacing:-1.5px; line-height:25px;}
+.popTestServiceClose.serviceClose_201123 .addText{text-align:right; display:block; text-decoration:underline; font-size:13px;}
+.serviceClose_201123 .checkboxWrap.fl{line-height:24px;}
+.serviceClose_201123 .checkboxWrap .checkStyle{margin-top:4px;}
+.serviceClose_201123 .layerPop .btnArea{margin-top:20px;}
+
+/*AI 진단평가 안내 팝업*/
+.popupWrap.sizeSm.serviceAi_201221 .bodyCont{padding:40px 30px 25px;}
+.serviceAi_201221 .layerPop .header{height:60px;  text-align:left;padding-left:25px}
+.serviceAi_201221 .layerPop .header h2{font-size:22px; line-height:60px; margin:0;}
+.serviceAi_201221 .layerPop .bodyCont:after{display:none;}
+.serviceAi_201221 .layerPop > .btnClose{background:url('//cdndata.milkt.co.kr/high/www/Img_new/common/bg_btn_close_v2.png') no-repeat center;}
+.serviceAi_201221 .layerPop .bodyCont .inner{padding:35px 30px; background:#f8f8f8;font-size:13px;color:#222;line-height:18px;}
+.serviceAi_201221 .layerPop .bodyCont .inner em{color:#7847a5}
+.serviceAi_201221 .layerPop .bodyCont .inner strong{color:#888;font-weight:normal}
+.serviceAi_201221 .checkboxWrap.fl{line-height:24px;}
+.serviceAi_201221 .checkboxWrap .checkStyle{margin-top:4px;}
+.serviceAi_201221 .layerPop .btnArea{margin-top:20px;}
+
+/*보카드릴 안내 팝업*/
+.popupWrap.sizeSm.popTestServiceClose.serviceClose_210112 .layerPop{width:650px;}
+.popupWrap.sizeSm.serviceClose_210112 .bodyCont{padding:30px;letter-spacing:-1px}
+.serviceClose_210112 .layerPop .header{height:47px; background:#7847a5; text-align:left;}
+.serviceClose_210112 .layerPop .header h2{font-size:16px; line-height:47px; margin:0;padding-left: 23px}
+.serviceClose_210112 .layerPop .bodyCont:after{display:none;}
+.serviceClose_210112 .layerPop .bodyCont .tit{width:100%;font-size:30px;padding-bottom:20px}
+.serviceClose_210112 .layerPop .bodyCont h4{font-size:17px;font-weight:bold;color:#333;margin-bottom:8px;}
+.serviceClose_210112 .layerPop .bodyCont p{font-size:15px;color:#666;line-height:1.6}
+.serviceClose_210112 .layerPop .bodyCont p em{color:#f26f21;}
+.serviceClose_210112 .layerPop .bodyCont p strong{color:#434242;font-weight:normal}
+.serviceClose_210112 .layerPop .bodyCont .txtBox{background:#f7f7f7;padding:20px 25px;margin:20px 0}
+.serviceClose_210112 .layerPop .bodyCont .txtBox p{font-size:14px;color:#3d3c3c;font-weight:bold;margin-bottom:12px;}
+.serviceClose_210112 .layerPop .bodyCont .txtBox ul li{font-size:13px;color:#3d3c3c;margin-bottom:5px;}
+.serviceClose_210112 .layerPop .bodyCont .txtBox ul li:before{content:'';display:inline-block;width:2px;height:2px;background:#494848;vertical-align:middle;margin-right:5px;}
+.serviceClose_210112 .layerPop .bodyCont .txtBox ul li em{color:#f26f21;}
+.serviceClose_210112 .layerPop > .btnClose{background:url('//cdndata.milkt.co.kr/high/www/Img_new/common/bg_btn_close_v2.png') no-repeat center;}
+.serviceClose_210112 .checkboxWrap.fl{line-height:24px;}
+.serviceClose_210112 .checkboxWrap .checkStyle{margin-top:4px;}
+.serviceClose_210112 .layerPop .btnArea{margin-top:20px;}
+
+/* 퍼스트 클래스 추가 건 */
+.firstClassLnb{overflow:hidden;}
+.firstClassLnb .ftit{text-align:center;width:100%;height:50px;background:#6a4fb8}
+.firstClassLnb .ftit h2 {padding-top:15px;font-weight:bold;font-size:15px;color:#fff;}
+.firstClassLnb .ftit h2:before{content:'';display:inline-block;vertical-align:middle;width:18px;height:24px;margin:0px 6px 0 0;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210115/ico_first.png) no-repeat 0 0;}
+.firstClassLnb ul li{text-align:center;border-top:1px solid #e9e9e9;border-left:1px solid #e9e9e9;font-size:12px;width:104px;height:128px;float:left;box-sizing:border-box;}
+.firstClassLnb ul li.aifirst a {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210115/icon_01.png) no-repeat center 23px;}
+.firstClassLnb ul li.aifirst {border-top:0}
+.firstClassLnb ul li.aisecond{border-top:0}
+.firstClassLnb ul li.aisecond a {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210115/icon_02.png) no-repeat center 23px;}
+.firstClassLnb ul li.aithird a {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210115/icon_03.png) no-repeat center 23px;}
+.firstClassLnb ul li.aifourth a {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210115/icon_04.png) no-repeat center 23px;}
+.firstClassLnb ul li a {display:block;padding:90px 0 23px 0;color:#1c2427;font-weight:bold;font-size:12px;}
+
+/* 퍼스트 클래스 수정 건 */
+.firstClassLnb.v2 ul li{text-align:center;border-top:1px solid #e9e9e9;border-left:1px solid #e9e9e9;font-size:12px;width:104px;height:117px;float:left;box-sizing:border-box;}
+.firstClassLnb.v2 ul li.aifirst a {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_01.png) no-repeat center 29px;}
+.firstClassLnb.v2 ul li.aifirst {border-top:0}
+.firstClassLnb.v2 ul li.aisecond{border-top:0}
+.firstClassLnb.v2 ul li.aisecond a {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_02.png) no-repeat center 29px;}
+.firstClassLnb.v2 ul li.aithird a {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_03.png) no-repeat center 23px;padding:75px 0 26px 0;}
+.firstClassLnb.v2 ul li.aifourth a {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_04.png) no-repeat center 23px;padding:75px 0 26px 0;}
+.firstClassLnb.v2 ul li a {display:block;padding:81px 0 20px 0;color:#1c2427;font-weight:bold;font-size:12px;}
+.firstClassLnb .ftit h2.rival:before{ background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_05.png) no-repeat center 4px; }
+.firstClassLnb.v2 ul li.math a{ background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_06.png) no-repeat 27px 29px; }
+.firstClassLnb.v2 ul li.science a{ background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_07.png) no-repeat 27px 29px; }
+
+/* 입시정보 추가 */
+.firstClassLnb .ftit h2.calendar {padding-top:15px;font-weight:bold;font-size:13px;color:#fff;}
+.firstClassLnb .ftit h2.calendar:before{content:'';display:inline-block;vertical-align:middle;width:16px;height:19px;margin:-4px 6px 0 0;background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/ico_calendar.png) no-repeat 0 0;}
+.firstClassLnb.v2 ul li.test01{border-bottom: 1px solid #e9e9e9}
+.firstClassLnb.v2 ul li.test02{border-bottom: 1px solid #e9e9e9}
+.firstClassLnb.v2 ul li.sat01 a{ background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_08.png) no-repeat 27px 29px; }
+.firstClassLnb.v2 ul li.sat02 a{ background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_09.png) no-repeat 27px 29px; }
+.firstClassLnb.v2 ul li.test01 a{ background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_10.png) no-repeat 27px 29px; }
+.firstClassLnb.v2 ul li.test02 a{ background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_11.png) no-repeat 27px 29px; }
+
+/*====== 2022-05-02 고등 브랜드웹 UI개선 : s ======*/
+/* 강좌안내 LNB */
+.firstClassLnb.v3 ul li{text-align:center;border-top:1px solid #e9e9e9;border-left:1px solid #e9e9e9;font-size:12px;width:104px;height:117px;float:left;box-sizing:border-box;}
+.firstClassLnb.v3 ul li a {display:block;padding:81px 0 20px 0;color:#1c2427;font-weight:bold;font-size:12px;}
+.firstClassLnb.v3 ul li.aifirst{border-top:0}
+.firstClassLnb.v3 ul li.aifirst a {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_02.png) no-repeat 27px 29px;}
+.firstClassLnb.v3 ul li.aisecond a {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/210209/icon_03.png) no-repeat 27px 29px;padding:79px 0 20px 0;}
+
+/* header(기존것에서 커스텀되었으며, header 클래스 추가된 경우에만 적용됨) */
+#header.header{position:relative;z-index:4000;width:100%;}
+
+.header .headerCon{position:relative;width:100%;height:48px;padding:16px 0;box-sizing:border-box;margin:0 auto;}
+.header .headerCon .linkMenu{overflow:unset;padding:0 54px 0 60px}
+.header .headerCon .linkMenu:after{display:block;clear:both;width:0;}
+.header .headerCon .linkMenu a{float:left;display:block;padding:0 18px;font-size:14px;color:#777;}
+.header .headerCon .linkMenu .left{float:left;}
+.header .headerCon .linkMenu .left a{background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/bul_gr_line01.png) no-repeat left 5px;}
+.header .headerCon .linkMenu .left span.sns a{display:block;height:16px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/header_220502/ico_sns.png) no-repeat 0 0;padding:0;}
+.header .headerCon .linkMenu .left span.sns a.sns01{width:20px;background-position:0 0;}
+.header .headerCon .linkMenu .left span.sns a.sns02{width:27px;background-position:-20px 0}
+.header .headerCon .linkMenu .left span.sns a.sns03{width:26px;background-position:-47px 0}
+.header .headerCon .linkMenu .left span.sns a.sns04{width:35px;background-position:-73px 0}
+.header .headerCon .linkMenu .left span.sns a.sns05{width:24px;background-position:-108px 0}
+.header .headerCon .linkMenu .left span.sns a.sns06{width:17px;margin-right:27px;background-position:-131px 0;}
+.header .headerCon .linkMenu .siteMilkT{float:left;position:relative;}
+.header .headerCon .linkMenu .siteMilkT .txtSelected{display:block;}
+.header .headerCon .linkMenu .siteMilkT .txtSelected .txt{display:inline-block;padding-right:19px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/header_220502/ico_select_arrow.png) no-repeat right 60%;}
+.header .headerCon .linkMenu .siteMilkT .txtSelected.active{background:none;}
+.header .headerCon .linkMenu .siteMilkT .txtSelected.active + .wrapListMilkt{display:block;}
+.header .headerCon .linkMenu .siteMilkT .wrapListMilkt{display:none;overflow:hidden;position:absolute;top:-12px;left:0;z-index:1;width:117px;padding:6px 0 11px;border:1px solid #ddd;border-radius:4px;background:#fff;}
+.header .headerCon .linkMenu .siteMilkT .listMilkT li + li{margin-top:3px;}
+.header .headerCon .linkMenu .siteMilkT .listMilkT li a{height:23px;padding-right:0;line-height:23px;background:none;}
+.header .headerCon .linkMenu .siteMilkT .listMilkT li a:hover{font-weight:bold;color:#222;text-decoration:none;}
+.header .headerCon .linkMenu .siteMilkT .btnClose{position:absolute;top:0;right:0;width:28px;height:28px;padding:0;background:#fff url(//cdndata.milkt.co.kr/high/www/Img_new/header_220502/ico_select_arrow_active.png) no-repeat 0 17px}
+
+.header .headerCon .linkMenu .right {float: right;}
+.header .headerCon .linkMenu .right a{padding:0 15px}
+.header .headerCon .linkMenu .right a:first-child {padding-left:0;background:none;}
+.header .headerCon .linkMenu .right span{display:inline-block;}
+.header .headerCon .linkMenu .right span.nNum{background:#7847a5;border-radius:10px;color:#fff;text-align:center;font-size:12px;padding:0 7px;}
+.header .headerCon .linkMenu .right span.bNum{width:16px;height:16px;background:#7847a5;line-height:16px;border-radius:100%;color:#fff;text-align:center;font-size:12px;}
+.header .headerCon .linkMenu a.login {color:#8553b3;}
+.header .headerCon .linkMenu .dayInfo{float:left;display:inline-block;font-size:0;vertical-align:top;}
+.header .headerCon .linkMenu .dayInfo .txt{font-size:14px;color:#777;}
+.header .headerCon .linkMenu .dayInfo .dday{overflow:hidden;display:inline-block;width:48px;height:17px;margin:1px 28px 0 6px;border-radius:9px;background:#8745a9;font-family:'Noto Sans Kr';font-size:12px;line-height:17px;color:#fff;text-align:center;vertical-align:top;}
+.header .headerCon .linkMenu .dayInfo .dday em{display:inline-block;/*animation:showingDown 3s .2s ease-in infinite;*/}
+
+.header #gnb {letter-spacing:-0.5px;border-top:1px solid #eaeaea; width:100%;}
+.header #gnb .gnbSch {padding-top:7px; min-width:163px;}
+.header #gnb .gnbSch > a {display: block;float: left; vertical-align:top; width:55px;height:55px;text-indent:-9999px; font-size:0;}
+.header #gnb .gnbSch > a.btnSch {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_sch.png) no-repeat center center;}
+.header #gnb .gnbSch > a.btnSch.btnSchClose {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_sch_close.png) no-repeat center center;}
+.header #gnb .gnbSch > a.allMenu {background:url(//cdndata.milkt.co.kr/high/www/Img_new/common/btn_allmenu.png) no-repeat center center;}
+
+.header #gnb .gnbWrapNewAll{position: relative; width:100%;}
+.header #gnb .gnbWrapNewAll h1{padding:21px 60px 22px 62px}
+.header #gnb .gnbWrapNewAll h1 a{display:block;width:118px;height:27px;background:url(//cdndata.milkt.co.kr/high/www/Img_new/header_220502/logo_milkt_high.png) no-repeat;}
+.header #gnb .gnbWrapNew {display:flex;justify-content:space-between;flex-wrap:nowrap;overflow:hidden;height:70px;border-bottom:1px solid #eaeaea;background:none}
+.header #gnb .gnbWrapNew .gnbMenu{overflow:hidden;display:flex;justify-content:space-between;min-width:1220px;width:1220px;margin:15px 0 0 -70px;box-sizing:border-box;}
+.header #gnb .gnbWrapNew .gnbMenu:after{content:none;}
+.header #gnb .gnbMenu > li {float:left; text-align:center; margin-right:0;}
+.header #gnb .gnbMenu > li:last-child{margin-right:0px;}
+.header #gnb .gnbMenu > li.on{position:relative;}
+.header #gnb .gnbMenu > li a.on{position:relative; color:#8553b3; width:auto}
+.header #gnb .gnbMenu > li a.on:after{display:inline-block; content:''; position:absolute; left:0; right:0; bottom:-13px; background:#8553b3; height:3px}
+
+.header #gnb .gnbMenu > li a:hover {color:#8553b3;text-decoration:none;}
+.header #gnb .gnbMenu > li:first-child a{background:none;}
+.header #gnb .gnbMenu > li > a {display:inline-block; width:auto; padding:10px 0px; font-size:18px; color:#000; font-family:'Noto Sans KR', Dotum, '돋움', Arial, sans-serif; line-height:1.2;}
+
+@media(max-width:1700px){
+    .header #gnb .gnbWrapNew .gnbMenu{min-width:1080px;width:1080px}
+}
+/* #107512 GNB 떨어지는 현상 수정 - 정보수정 메뉴가 추가되면서 길이가 늘어남 */
+@media(max-width:1520px){
+    .header #gnb .gnbWrapNew .gnbMenu{min-width:980px;width:980px}
+    .header .headerCon .linkMenu .right a{padding:0 10px}
+}
+@media(max-width:1400px){
+    .header .headerCon .linkMenu{padding:0 44px 0 50px}
+    .header .headerCon .linkMenu .right a{padding:0 10px}
+    .header #gnb .gnbWrapNewAll h1{padding-left:52px}
+    .header #gnb .gnbWrapNew .gnbMenu{min-width:880px;width:880px}
+    .header #gnb .gnbSch{min-width:153px;}
+}
+.wrap,
+#header.header,
+#footer .footTop{/*min-width:1300px;*/}/*2022-12-29 확대시 헤더 레이아웃 틀어짐 현상으로 주석 처리*/
+
+/* animations */
+@keyframes showingDown{
+    0% {transform:translateY(-17px);}
+    25%{transform:translateY(0);}
+    50%{transform:translateY(0);}
+    75%{transform:translateY(0);}
+    100% {transform:translateY(17px);}
+}
+/*====== // 2022-05-02 고등 브랜드웹 UI개선 : e ======*/
+
+/*2022-05-10 AI MATCH UP 장학금 이벤트 팝업*/
+.popupWrap.sizeSm.popScholarship .layerPop {width: 700px; margin-top: -60px;}
+.popupWrap.sizeSm.popScholarship .bodyCont{padding: 56px 80px 0px 80px; max-height: 750px;}
+.popupWrap.sizeSm.popScholarship .bodyCont .inner{ width: 100%; height: 240px; padding: 20px; font-size: 15px; color: #888; line-height: 1.4; border: solid 1px #e9e9e9; background: #fff; box-sizing: border-box; overflow-x: hidden; overflow-y: auto;}
+.popupWrap.sizeSm.popScholarship .bodyCont *{box-sizing: border-box;}
+.popupWrap.sizeSm.popScholarship .txt1{ padding: 30px 0 0 0; font-size: 13px; color: #434343; text-align: center;}
+.popupWrap.sizeSm.popScholarship .layerPop .btnArea{ margin-top: 30px;}
+.popupWrap.sizeSm.popScholarship .layerPop .btnArea .btns.mdOrg{ min-width: 100px;}
+.popupWrap.sizeSm.popScholarship .layerPop .btnArea .btns.mdGry{ min-width: 100px;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm table th {padding: 16px 10px 16px 10px;font-weight: bold;	font-size: 12px;	text-align: left;	background-color: #fbfbfb;	color: #333;	font-weight: bold;	border-left: 1px solid #e0e0e0;	border-bottom: 1px solid #e0e0e0;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm table th:last-child{border-right: 1px solid #e0e0e0;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm table tbody td.p10 {	height: 15px;	padding: 16px 10px 16px 10px;	vertical-align: middle;	font-size: 13px;	color: #666;	text-align: center;	border-left: 1px solid #e0e0e0;	border-bottom: 1px solid #e0e0e0;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm table tbody td {	height: 15px;	padding: 9px 9px 9px 9px;	vertical-align: middle;	font-size: 13px;	color: #666;	text-align: center;	border-left: 1px solid #e0e0e0;	border-bottom: 1px solid #e0e0e0;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm table tbody td:last-child {border-right: 1px solid #e0e0e0;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm select {width: 100%; height: 36px;	padding: 0 0 0 15px;	border: 1px solid #999;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm input[type=text] { width: 100%; height: 36px;	padding: 0 14px;	font-weight: bold;	font-size: 13px;	color: #333;	line-height: 36px;	border: 1px solid #999;	box-sizing: border-box;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm td span.fileTxt{display: block; font-size: 12px; color: #774f98; padding: 5px 0;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm td .file {margin: -3px 0 0 10px;	width: 100%;	display: inline-block;	float: none!important;	height: 27px!important;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm select[disabled]{background-color:#fff;color:#999;border:1px solid #dcdcdc;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm input[readonly]{background-color:#fff;color:#999;border:1px solid #dcdcdc!important;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm input[disabled]{background-color:#fff;color:#999;border:1px solid #dcdcdc!important;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm input.file[disabled]{border:0px !important;background: none;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm textarea {width: 100%;	height: 80px;	padding: 5px 14px;	font-size: 14px;	color: #333;	border: 0px solid #999;	resize: none;	box-sizing: border-box;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm .textAreaBox{position: relative;width: 100%;	height: 90px;}
+.popupWrap.sizeSm.popScholarship .bodyCont .tblForm .textAreaBox .txtCount {position: absolute;	right: 25px;	bottom: -6px;color: #999;	font-size: 11px;	font-weight: normal;	}
+.popupWrap.sizeSm.popScholarship .bodyCont .title{ width: 100%; font-size: 17px; color: #000; font-weight: bold; text-align: center; padding: 0 0 0 0;}
+.popupWrap.sizeSm.popScholarship .bodyCont .subtitle{font-size: 14px; color: #000; line-height: 1.5; text-align: center; padding: 20px 0 40px 0;}
+
+/* 2022-06-08 채팅상담 팝업 */
+.lpop_chatbot{width:100%;height:100%;position:absolute;top:0;left:0;z-index:9000}
+.lpop_chatbot .blind_box{z-index:20;position:fixed;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.8}
+.lpop_chatbot .txt_area{position:fixed;z-index:21;top:50%;left:50%;margin:-204px 0 0 -227px;width:455px;height:408px;border-radius:30px;background-color:#fff;}
+.lpop_chatbot .txt_area::before{display:block;content:'';position:absolute;top:-49px;left:50%;width:118px;height:118px;margin-left:-59px;background:url(http://cdndata.milkt.co.kr/ele/www/Images/chatbot/lpop_char.png) no-repeat;}
+.lpop_chatbot .txt_area .btn_close{display:block;position:absolute;z-index:1;top:20px;right:20px;width:30px;height:30px;padding:5px;box-sizing:border-box;font-size:1px;color:transparent;background:url(http://cdndata.milkt.co.kr/ele/www/Images/common/btn_lpop_close02.gif) no-repeat 50% 50%}
+.lpop_chatbot .txt_area .tit{display:block;position:relative;margin-top:70px;text-align:center;font-size:28px;color:#1f1f1f;font-weight:900;line-height:32px;}
+.lpop_chatbot .txt_area .txt{margin-top:17px;font-size:20px;color:#3f3e3e;line-height:29px;text-align:center;}
+.lpop_chatbot .txt_area .btn_login{display:block;width:275px;height:59px;line-height:59px;margin:22px auto 0;background-color:#7444ff;color:#fff;font-size:22px;font-weight:900;text-align:center;}
+.lpop_chatbot .txt_area .btn_go{display:block;margin:20px auto 0;font-size:18px;color:#222222;text-align:center;font-weight:bold;}
+
+/* 2022-12-28_[#95938]성적장학생 수정 */
+.popScholar.popupWrap#popExamDoc .scrollY{max-height:480px;overflow-y:auto;}
+.popScholar.popupWrap.popRegiNotice .layerPop{width:429px;}
+.popScholar.popupWrap .layerPop.docExample{width:800px;transform:translateY(-50%);margin-top:0!important;}
+.popScholar .layerPop .bodyCont{padding:30px 20px;}
+.popScholar .layerPop.docExample .bodyCont{padding:30px 22px 30px 30px;}
+.popScholar .layerPop .header{background:#7847a5;}
+.popScholar .layerPop > .btnClose{width:19px;height:19px;background:url(//cdndata.milkt.co.kr/high/www/img_new/common/bg_btn_close2.png)}
+.popScholar.popupWrap.popRegiNotice .bodyCont .conList > li + li{margin-top:20px;}
+.popScholar.popupWrap.popRegiNotice .bodyCont .txt{font-size:15px;letter-spacing:-1.1px;}
+.popScholar.popupWrap.popRegiNotice .bodyCont .txt span{font-family:'Noto Sans Bold';color:#0059ba;}
+.popScholar.popupWrap.popRegiNotice .bodyCont .txt span.caution{color:#ff3300;}
+.popScholar.popupWrap.popRegiNotice .bodyCont .txt span.etc{font-family:'Noto Sans Regular';font-size:13px;color:#a6a6a6;letter-spacing:-1.2px}
+.popScholar.popupWrap .btnArea.chkBtn .checkboxWrap{margin-top:3px;}
+.popScholar .checkboxWrap label{margin-left:0;font-size:13px;letter-spacing:-0.8px;-webkit-user-select:none;user-select:none;}
+.popScholar .checkboxWrap .checkStyle{width:21px;height:17px;margin-top:0;outline:none;}
+.popScholar .checkboxWrap .checkStyle.on{background:url(//cdndata.milkt.co.kr/high/www/img_new/common/bg_chk_checked2.png);background-position:0 -1px;}
+.popScholar.popupWrap .btnArea.chkBtn .bigdkGry{min-width:218px;margin-top:19px;background:#bcbcbc;box-sizing:border-box;font-size:15px}
+.popScholar.popupWrap .docExample .btnArea.chkBtn .bigdkGry{min-width:124px;}
+.popScholar.popupWrap .btnArea.chkBtn .bigdkGry.active{background:#7847a5;}
+.popScholar .layerPop .bodyCont:after{display:none;}
+.popScholar.popupWrap .layerPop .imgWrap{position:relative;display:block;}
+.popScholar.popupWrap .layerPop.docExample .imgWrap{padding:0 24px;}
+.popScholar.popupWrap .layerPop .imgWrap img{display:block;max-width:100%;}
+.popScholar.popupWrap .layerPop.docExample .partTit{font-family:'Noto Sans Bold';font-size:21px;color:#7847a5;}
+.popScholar.popupWrap .layerPop.docExample .gradBadge{display:inline-flex;align-items:center;justify-content:center;min-width:175px;height:36px;border-radius:18px;background:#7847a5;font-size:16px;font-family: 'Noto Sans Medium';color:#fff;}
+.popScholar.popupWrap .layerPop.docExample .gradBadge + .conPart{margin-top:15px;}
+.popScholar.popupWrap .docExample .ulList04 li{padding-left:32px;background:url(//cdndata.milkt.co.kr/high/www/img_new/common/bg_msion_chk03.png) no-repeat 0 4px;font-size:14px;letter-spacing:0;}
+.popScholar.popupWrap .docExample .btnArea.chkBtn .bigdkGry{margin-top:30px;}
+.popScholar.popupWrap .docExample .caution{font-weight:700;color:#ff3300;}
+.popScholar.popupWrap .docExample .btnArea.chkBtn{border-top:none;margin:0;padding:0;}
+.popScholar.popupWrap .docExample .partTit + .imgWrap{margin-top:13px;}
+.popScholar.popupWrap .docExample .imgWrap + .ulList04{margin-top:22px;}
+.popScholar.popupWrap .layerPop.docExample .conPart + .conPart{margin-top:34px;}
+.popScholar.popupWrap ::-webkit-scrollbar{width:9px;background:#ffffff}
+.popScholar.popupWrap ::-webkit-scrollbar-thumb{border-radius:8px;background:#d5d5d5;}
+
+/* Top 메인배너 */ /* #105343 배너 관리자 추가 및 개선의 건 2023-06-28*/
+.bnnrTopMainSlider{min-width:1080px;width:100%;height:80px}
+.bnnrTopMain{position:relative;overflow:hidden}
+.bnnrTopMain > a{position:relative;display:block;height:100%}
+.bnnrTopMain > a > img{position:absolute;left:50%;transform:translateX(-50%)}
+.bnnrTopMain .two{position:absolute;left:50%;width:1920px;transform:translateX(-50%)}
+.bnnrTopMain .two a{position:absolute;top:0;width:auto}
+.bnnrTopMain .two a.leftLinkBan{left:0}
+.bnnrTopMain .two a.rightLinkBan{right:0}
+
+/* #99883 선생님 개편 - 메뉴 추가 2023-04-05 */
+.dropMenuWrap {display: none;position: relative;width: 100%;position: absolute;background: #fff;border-bottom: 1px solid #eaeaea}
+.dropMenuWrap.on{display: block}
+.dropMenuWrap .subject{width: 100%;height: 40px;border-bottom: 1px solid #eaeaea;background: #fbfbfb;text-align: center}
+.dropMenuWrap .subject ul{display: flex;width: 1300px;margin: 0 auto}
+.dropMenuWrap .subject ul li{display: inline-block;width: 100%;border-left: 1px solid #eaeaea;text-align: center}
+.dropMenuWrap .subject ul li:last-child{border-right: 1px solid #eaeaea}
+.dropMenuWrap .subject li a{display: inline-block;width: 100%;border-bottom: 1px solid #eaeaea;line-height: 40px;font-weight: bold;font-size: 15px;color: #333}
+.dropMenuWrap .teacher{ position: relative;display: flex;width: 1300px;margin: 0 auto;justify-content: space-between;}
+.dropMenuWrap .teacher .listWrap{width: 100%;padding: 14px 0 30px;border-left: 1px solid #eaeaea}
+.dropMenuWrap .teacher .listWrap:last-child{border-right: 1px solid #eaeaea}
+.dropMenuWrap .teacher .listWrap .dth2{display: flex}
+.dropMenuWrap .teacher ul{float: left;width: 50%}
+.dropMenuWrap .teacher ul li{padding-left:14px;font-size: 13px;background: none;color: #555;line-height: 23px}
+.dropMenuWrap .teacher h3{font-size: 13px;color: #8553b3;padding-left: 14px;text-align: left;line-height: 23px}
+.dropMenuWrap .teacher h3:not(:first-child){margin-top: 22px}
+.dropMenuWrap .teacher .class{display: inline-block;width: 100%;margin: 30px 0 20px;border-top: 1px solid #eaeaea;border-bottom: 1px solid #eaeaea;background: #fbfbfb;line-height: 40px;font-weight: bold;font-size: 15px;color: #333;text-align: center}
+.dropMenuWrap .teacher .icoNew{vertical-align: -2px}
+.dropMenuWrap .btnClose{position: absolute;top: -32px;right: -33px;border: none;width: 24px;height: 24px;font-size: 0;text-indent: -999;background: url(//cdndata.milkt.co.kr/high/www/img_new/common/ico_sub_close.png);cursor: pointer;}

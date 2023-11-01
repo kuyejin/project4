@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="grade">
+    <!-- 성적표 목록 -->
+    <select id="gradeList" resultType="kr.ed.haebeop.domain.Grade">
+        select * from grade where tid = #{tid} order by no asc
+    </select>
+    <!-- 성적표(학생용) 목록 -->
+    <select id="sgradeList" resultType="kr.ed.haebeop.domain.Grade">
+        select * from grade where stuid = #{id} order by no asc
+    </select>
+    <!-- 성적 상세보기  평균, 합계-->
+    <select id="gradeDetail" resultType="kr.ed.haebeop.domain.Grade">
+        select *, kor+math+eng+social+science as su, (kor+math+eng+social+science)/5 as av from grade where no=#{no}
+    </select>
+    <!-- 성적 입력 -->
+    <insert id="gradeInsert">
+        insert into grade(stuname, stuid, kor, math, eng, social, science, exam, tname, tid) values (#{stuname}, #{stuid}, #{kor}, #{math}, #{eng}, #{social}, #{science}, #{exam}, #{tname}, #{tid})
+    </insert>
+    <!-- 성적 삭제 -->
+    <delete id="gradeDelete">
+        delete from grade where no=#{no}
+    </delete>
+    <!-- 성적 수정 -->
+    <update id="gradeEdit">
+        update grade set exam=#{exam}, kor=#{kor}, math=#{math}, eng=#{eng}, social=#{social}, science=#{science} where no=#{no}
+    </update>
+</mapper>

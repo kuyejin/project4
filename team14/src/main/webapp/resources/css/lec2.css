@@ -1,0 +1,321 @@
+@charset "utf-8";
+/* 본문 영역 스타일 */
+/* background-image: url("../img/login.jpg"); */
+
+.page {
+    clear: both;
+    width: 100vw;
+    position: relative;
+}
+
+.page::after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.page_wrap {
+    clear: both;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.page_tit {
+    font-size: 48px;
+    text-align: center;
+    color: #3273dc;
+    padding-bottom: 1.3em;
+}
+
+.breadcrumb {
+    clear: both;
+    width: 1200px;
+    margin: 0 auto;
+    text-align: right;
+    color: #3273dc;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.breadcrumb a {
+    color: #3273dc;
+}
+
+.tb1 {
+    width: 1200px;
+    font-size: 17px;
+    margin-bottom: 50px;
+    border-collapse: collapse; /* 테이블 간격 없애기 */
+}
+
+.tb1 thead th {
+    line-height: 32px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    background-color: #BED4E9; /* 배경색 조정 */
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.tb1 thead td {
+    font-size: 16px;
+    text-align: right;
+    line-height: 40px;
+    border-bottom: #7e7e7e 1px solid;
+}
+
+.tb1 thead td:nth-child(1) {
+    width: 6%;
+    text-align: center;
+}
+
+.tb1 thead td:nth-child(2) {
+    text-align: left;
+    width: 14%;
+}
+
+.tb1 thead td:nth-child(3) {
+    font-weight: 600;
+    width: 62%;
+}
+
+.tb1 thead td:nth-child(4) {
+    width: 10%;
+}
+
+.tb1 thead td:nth-child(5) {
+    width: 8%;
+}
+
+/* 글 내용 */
+.tb1 tbody tr td {
+    padding-left: 10px;
+    padding-top: 40px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.content {
+    min-height: 400px;
+    border-bottom: 1px solid #7e7e7e;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.tb2 {
+    width: 1200px;
+}
+
+.tb2 thead .title th {
+    line-height: 32px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    background-color: #BED4E9;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.tb2 .item1 {
+    width: 10%;
+}
+
+.tb2 .item2 {
+    width: 68%;
+}
+
+.tb2 .item3 {
+    width: 10%;
+}
+
+.tb2 .item4 {
+    width: 12%;
+}
+
+.tb2 td {
+    border-bottom: 1px solid #7e7e7e;
+    vertical-align: middle;
+    height: 60px;
+}
+
+.tb2 thead tr th {
+    text-align: center;
+}
+
+.tb2 tbody tr td:first-child {
+    text-align: center;
+    font-weight: bold;
+}
+
+.tb2 tbody tr td:nth-child(2) {
+    word-break: break-word;
+}
+
+.tb2 tbody tr td:nth-child(3) {
+    text-align: center;
+}
+
+.btn1 {
+    display: block;
+    border-radius: 10px;
+    max-width: 120px;
+    text-align: center;
+    background-color: #3273dc;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+.btn1:hover {
+    background-color: #666666;
+}
+
+.inbtn, .delete_btn {
+    display: inline-block;
+    border-radius: 5px;
+    max-width: 100px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 7px 15px;
+}
+
+.inbtn {
+    background-color: #3273dc;
+    color: #fff;
+}
+
+.delete_btn {
+    background-color: red;
+    color: #fff;
+}
+
+.inbtn:hover, .delete_btn:hover {
+    background-color: #555;
+}
+
+.frm {
+    margin-top: 50px;
+}
+
+.btn_group {
+    margin-top: 50px;
+}
+
+#ans_btn {
+    border-radius: 5px;
+    text-align: center;
+}
+
+.tb3 {
+    width: 1200px;
+    height: 140px;
+    margin-bottom: 50px;
+    background-color: #BED4E9;
+    border-radius: 10px;
+}
+
+.tb3 th {
+    line-height: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tb3 th:first-child {
+    width: 15%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+tb3 th:nth-child(2) {
+    width: 70%;
+}
+
+tb3 th:last-child {
+    width: 15%;
+}
+
+textarea {
+    resize: none;
+    padding: 10px;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+#nologin_comment {
+    width: 1200px;
+    text-align: center;
+    padding-top: 60px;
+    position: absolute;
+    font-weight: bold;
+}
+
+.product {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.productimg {
+    flex: 1;
+    width: 700px;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px 0;
+    display: inline-block;
+    float: left;
+}
+
+.productdesc {
+    flex: 1;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    display: inline-block;
+    float: left;
+    font-size: 20px;
+}
+
+.productdesctable {
+    width: 400px;
+    height: 500px;
+}
+
+.pname {
+    height: 80px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pprice {
+    height: 60px;
+    font-size: 22px;
+}
+
+.pcate, .pdate {
+    height: 30px;
+}
+
+.pbtn td {
+    vertical-align: bottom;
+    padding-bottom: 10px;
+}
+
+.desc-area {
+    padding: 50px;
+}
+
+.tb4 {
+    width: 1200px;
+    text-align: center;
+}
