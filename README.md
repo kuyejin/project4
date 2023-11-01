@@ -1,4 +1,4 @@
-# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;천재교육 풀스택 과정 4차 프로젝트 
+# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;천재교육 풀스택 과정 4차 개인 프로젝트 
 <br/>
 
 
@@ -17,29 +17,11 @@
 학생들의 성장과 교육 과정을 더욱 효과적으로 관리하고,<br/> 
 경험을 나누며, <br/>유익한 자원을 활용하여
  **함께 성장할 수 있는 플랫폼을 제공**하는 것이   
- 저희 팀의 기획의도 입니다.  
+ 기획의도 입니다.  
  <br/> <br/>
  
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔹 HAEBEOP 🔹에 대해 자세히 설명해 드릴게요!
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[🙋‍♀️  CLIKE ME  🙋]
-<br/>
-  
-​
-​
-​
-  
-​
-# 👤 팀원 소개
-백준철 - **리더**    &nbsp;&nbsp;관리자 관련 기능 구현, 게시글 신고 기능 구현, 선생님 기능 구현 <br/>
-구예진 -  **팀원**   &nbsp;&nbsp;회원 관련 기능 구현, 이메일 인증 기능 구현, 나의 학습방 기능 구현<br/>
-신승원 -  **팀원**   &nbsp;&nbsp;템플릿 및 전체 CSS 담당, 성적표 게시판 기능 구현, 학습 캘린더 기능 구현<br/>
-박진권 -  **팀원**   &nbsp;&nbsp;FAQ 게시판 기능 구현, 공지사항 기능 구현, 게시글 좋아요 기능 구현<br/>
-오세훈 - **깃마스터**    &nbsp;&nbsp;뉴스 API 기능 구현, 강의 기능 구현, 결제 기능 구현<br/>
-​
-<br/>
-​
 # 🗓 개발일정
-2023.10.10 - 2023.10.25
+2023.10.01 - 2023.10.09
 ​
 <br/>
 ​
@@ -63,27 +45,7 @@
 <br/>
 ​
 ​
-​
-​
-#  👨‍👨 협업 방식
-**✔ 언제든 자유롭게 의견내기, 단 강요는 ��‍♂️**   
-​
-✔   [![](https://camo.githubusercontent.com/5f4f9e864500236994df27a0204caec7543b79162b3e45e9edaecc499ad2186d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6f74696f6e2d3030303030303f7374796c653d666c61742d726f756e64266c6f676f3d4e6f74696f6e266c6f676f436f6c6f723d7768697465)](https://www.notion.so/2-61e48e6a682e4d7191fc2993b91b0665)
-&nbsp;&nbsp;**개발에 관련된 모든 자료를 공유하며 과정를 기록합니다.** <br/>
-​
-✔ <img src="https://img.shields.io/badge/slack-4A154B?style=flat&logo=slack&logoColor=white"/></a>
-&nbsp;&nbsp;**개발 과정에서 발생하는 모든 이슈를 공유하며 협력하여 해결할 수 있도록 합니다.**
-​
- 
-​
-<br/>
-​
-​
 
-# 📅 WBS
-![wbs](output/wbs/wbs.png)
-
-​
 #  📊 데이터베이스 설계
 ​
 ## 1️⃣ 요구사항 분석
